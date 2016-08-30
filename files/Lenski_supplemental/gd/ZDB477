@@ -1,0 +1,111 @@
+#=GENOME_DIFF 1.0
+DEL	100	27,28	REL606	15499	1494	between=IS150	edit=1
+MOB	101	27,28	REL606	16990	IS150	1	3	edit=1
+SNP	74	29	REL606	281923	T	
+INS	75	30,31	REL606	473904	GC	
+MOB	66	2,5	REL606	546191	IS1	1	9	
+SNP	76	32	REL606	648692	T	
+DEL	102	24	REL606	664688	1446	deletion=IS150	edit=1
+DEL	103	11,33	REL606	1092778	17752	edit=1	mediated=IS3
+MOB	67	18,20	REL606	1162790	IS150	-1	3	
+DEL	104	34	REL606	1270033	535	between=ldr repeats	edit=1
+MOB	105	13,23	REL606	1270660	IS150	-1	4	edit=1
+SNP	77	35	REL606	1331794	A	
+DEL	107	10,14	REL606	1462254	66	edit=1	mediated=IS150
+MOB	106	10,14	REL606	1462320	IS150	-1	3	edit=1	note=predicted to be initial IS based on ZDB199
+DEL	63	36	REL606	1609175	7554	between=IS3
+SNP	78	37	REL606	1691510	A	
+SNP	79	38	REL606	1733343	A	
+DEL	80	39	REL606	1780026	1	
+MOB	68	21,8	REL606	1821482	IS150	1	3	
+SNP	81	40	REL606	1886011	A	
+DEL	82	41	REL606	1893446	1	
+INS	83	42	REL606	2333539	T	
+SNP	84	43	REL606	2446984	C	
+SNP	85	44	REL606	2665639	T	
+DEL	108	26,45	REL606	2772711	1724	check=1	edit=1	mediated=IS186	note=appears to be new copy of IS186 inside of the IS150 we end at
+SNP	86	46	REL606	2999330	A	
+MOB	69	3,4	REL606	3015771	IS150	-1	3	
+SNP	87	47	REL606	3152406	C	
+SNP	88	48	REL606	3183348	A	
+SNP	89	49	REL606	3339313	C	
+SNP	90	50	REL606	3401754	A	
+MOB	70	17,7	REL606	3454491	IS150	1	2	ins_end=CAT
+SNP	91	51	REL606	3475057	T	
+SNP	92	52	REL606	3481820	G	
+CON	109		REL606	3551397	1828	REL606:3698394-3700221	edit=1
+DEL	64	53,22	REL606	3741966	177	mediated=IS1
+DEL	65	54,16	REL606	3894997	6460	mediated=IS150
+SNP	93	55	REL606	3909807	T	
+DEL	94	56	REL606	3911972	1	
+CON	110		REL606	4017756	8	REL606:230452-230461	edit=1
+SNP	95	57	REL606	4100183	G	
+MOB	71	9,19	REL606	4110237	IS150	-1	3	
+SNP	96	58	REL606	4111342	T	
+SNP	97	59	REL606	4177963	G	
+DEL	98	60,61	REL606	4431394	2	
+MOB	72	12,6	REL606	4524522	IS186	1	6	
+DEL	111	25	REL606	4613020	1	adjacent=IS150	after=3790	edit=1	within_copy=1
+MOB	73	25,15	REL606	4613020	IS150	1	3	
+SNP	99	62	REL606	4616538	C	
+JC	6		REL606	15386	1	REL606	4524527	-1	0	alignment_overlap=3	coverage_minus=58	coverage_plus=42	flanking_left=35	flanking_right=35	key=REL606__15386__1__REL606__4524530__0__3____35__35__1__0	max_left=34	max_left_minus=34	max_left_plus=30	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=15	max_min_right_minus=15	max_min_right_plus=15	max_right=31	max_right_minus=31	max_right_plus=31	min_overlap_score=820	pos_hash_score=50	side_1_annotate_key=repeat	side_1_overlap=3	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=0	side_2_redundant=0	total_non_overlap_reads=100	total_reads=161
+MC	28		REL606	15401	16989	1338	0	left_inside_cov=40	left_outside_cov=43	right_inside_cov=0	right_outside_cov=70
+JC	12		REL606	16728	-1	REL606	4524522	1	0	alignment_overlap=3	coverage_minus=27	coverage_plus=50	flanking_left=35	flanking_right=35	key=REL606__16728__0__REL606__4524519__1__3____35__35__1__0	max_left=30	max_left_minus=29	max_left_plus=30	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=16	max_min_right_minus=14	max_min_right_plus=16	max_right=31	max_right_minus=31	max_right_plus=30	min_overlap_score=640	pos_hash_score=41	side_1_annotate_key=repeat	side_1_overlap=3	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=0	side_2_redundant=0	total_non_overlap_reads=77	total_reads=129
+JC	27		REL606	16990	1	REL606	2774435	1	0	alignment_overlap=2	coverage_minus=43	coverage_plus=25	flanking_left=35	flanking_right=35	key=REL606__16990__1__REL606__2774433__1__2____35__35__0__1	max_left=32	max_left_minus=32	max_left_plus=32	max_min_left=16	max_min_left_minus=16	max_min_left_plus=16	max_min_right=16	max_min_right_minus=16	max_min_right_plus=14	max_right=32	max_right_minus=31	max_right_plus=32	min_overlap_score=520	pos_hash_score=38	side_1_annotate_key=gene	side_1_overlap=2	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=0	side_2_redundant=1	total_non_overlap_reads=68	total_reads=73
+RA	29		REL606	281923	0	G	T	frequency=1	new_cov=30/30	quality=184.1	ref_cov=1/0	tot_cov=31/30
+RA	30		REL606	473904	1	.	G	frequency=1	new_cov=19/32	quality=130.2	ref_cov=0/1	tot_cov=20/33
+RA	31		REL606	473904	2	.	C	frequency=1	new_cov=20/32	quality=127.3	ref_cov=0/1	tot_cov=20/33
+JC	2		REL606	546191	1	REL606	4521571	1	0	alignment_overlap=3	coverage_minus=55	coverage_plus=24	flanking_left=35	flanking_right=35	key=REL606__546190__1__REL606__4521569__1__3____35__35__0__1	max_left=31	max_left_minus=31	max_left_plus=29	max_min_left=14	max_min_left_minus=14	max_min_left_plus=14	max_min_right=16	max_min_right_minus=16	max_min_right_plus=16	max_right=32	max_right_minus=31	max_right_plus=32	min_overlap_score=680	pos_hash_score=40	side_1_annotate_key=gene	side_1_overlap=2	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=1	side_2_redundant=1	total_non_overlap_reads=79	total_reads=228
+JC	5		REL606	546199	-1	REL606	2143831	-1	0	alignment_overlap=2	coverage_minus=46	coverage_plus=72	flanking_left=35	flanking_right=35	key=REL606__546199__0__REL606__2143833__0__2____35__35__0__1	max_left=32	max_left_minus=32	max_left_plus=31	max_min_left=16	max_min_left_minus=16	max_min_left_plus=16	max_min_right=16	max_min_right_minus=15	max_min_right_plus=16	max_right=32	max_right_minus=31	max_right_plus=32	min_overlap_score=1047	pos_hash_score=50	side_1_annotate_key=gene	side_1_overlap=2	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=0	side_2_redundant=1	total_non_overlap_reads=118	total_reads=171
+JC	3		REL606	588495	1	REL606	3015771	1	0	alignment_overlap=2	coverage_minus=50	coverage_plus=51	flanking_left=35	flanking_right=35	key=REL606__588495__1__REL606__3015769__1__2____35__35__1__0	max_left=31	max_left_minus=31	max_left_plus=31	max_min_left=16	max_min_left_minus=16	max_min_left_plus=16	max_min_right=16	max_min_right_minus=16	max_min_right_plus=15	max_right=32	max_right_minus=31	max_right_plus=32	min_overlap_score=817	pos_hash_score=51	side_1_annotate_key=repeat	side_1_overlap=2	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=0	side_2_redundant=0	total_non_overlap_reads=101	total_reads=205
+JC	7		REL606	588495	1	REL606	3454492	-1	0	alignment_overlap=0	coverage_minus=70	coverage_plus=86	flanking_left=35	flanking_right=35	key=REL606__588495__1__REL606__3454492__0__0____35__35__0__1	max_left=34	max_left_minus=34	max_left_plus=34	max_min_left=17	max_min_left_minus=17	max_min_left_plus=17	max_min_right=17	max_min_right_minus=17	max_min_right_plus=17	max_right=34	max_right_minus=34	max_right_plus=34	min_overlap_score=1455	pos_hash_score=64	side_1_annotate_key=repeat	side_1_overlap=0	side_1_redundant=1	side_2_annotate_key=repeat	side_2_overlap=0	side_2_redundant=1	total_non_overlap_reads=156	total_reads=158
+JC	13		REL606	588495	1	REL606	1270660	1	0	alignment_overlap=2	coverage_minus=62	coverage_plus=58	flanking_left=35	flanking_right=35	key=REL606__588495__1__REL606__1270658__1__2____35__35__1__1	max_left=31	max_left_minus=31	max_left_plus=31	max_min_left=16	max_min_left_minus=16	max_min_left_plus=15	max_min_right=16	max_min_right_minus=16	max_min_right_plus=15	max_right=32	max_right_minus=31	max_right_plus=32	min_overlap_score=1050	pos_hash_score=50	side_1_annotate_key=repeat	side_1_overlap=2	side_1_redundant=1	side_2_annotate_key=repeat	side_2_overlap=0	side_2_redundant=1	total_non_overlap_reads=120	total_reads=128
+JC	19		REL606	590471	-1	REL606	4110239	-1	0	alignment_overlap=0	coverage_minus=47	coverage_plus=56	flanking_left=35	flanking_right=35	key=REL606__590471__0__REL606__4110239__0__0____35__35__1__0	max_left=33	max_left_minus=33	max_left_plus=33	max_min_left=17	max_min_left_minus=17	max_min_left_plus=16	max_min_right=17	max_min_right_minus=17	max_min_right_plus=17	max_right=32	max_right_minus=32	max_right_plus=32	min_overlap_score=1048	pos_hash_score=51	side_1_annotate_key=repeat	side_1_overlap=0	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=0	side_2_redundant=0	total_non_overlap_reads=103	total_reads=106
+JC	21		REL606	590471	-1	REL606	1821482	1	0	alignment_overlap=1	coverage_minus=41	coverage_plus=55	flanking_left=35	flanking_right=35	key=REL606__590472__0__REL606__1821482__1__1____35__35__1__0	max_left=33	max_left_minus=31	max_left_plus=33	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=17	max_min_right_minus=17	max_min_right_plus=17	max_right=33	max_right_minus=33	max_right_plus=33	min_overlap_score=804	pos_hash_score=50	side_1_annotate_key=repeat	side_1_overlap=0	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=1	side_2_redundant=0	total_non_overlap_reads=96	total_reads=100
+JC	23		REL606	590471	-1	REL606	1269593	-1	0	alignment_overlap=2	coverage_minus=26	coverage_plus=38	flanking_left=35	flanking_right=35	key=REL606__590473__0__REL606__1269593__0__2____35__35__1__1	max_left=32	max_left_minus=31	max_left_plus=32	max_min_left=16	max_min_left_minus=15	max_min_left_plus=16	max_min_right=16	max_min_right_minus=16	max_min_right_plus=16	max_right=32	max_right_minus=32	max_right_plus=32	min_overlap_score=532	pos_hash_score=36	side_1_annotate_key=repeat	side_1_overlap=0	side_1_redundant=1	side_2_annotate_key=repeat	side_2_overlap=2	side_2_redundant=1	total_non_overlap_reads=64	total_reads=92
+JC	17		REL606	590472	-1	REL606	3454491	1	-2	alignment_overlap=-2	coverage_minus=49	coverage_plus=59	flanking_left=35	flanking_right=35	key=REL606__590472__0__REL606__3454491__1__-2__AT__35__35__0__0	max_left=34	max_left_minus=34	max_left_plus=34	max_min_left=16	max_min_left_minus=14	max_min_left_plus=16	max_min_right=16	max_min_right_minus=15	max_min_right_plus=16	max_right=34	max_right_minus=34	max_right_plus=34	min_overlap_score=732	pos_hash_score=51	side_1_annotate_key=repeat	side_1_overlap=0	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=0	side_2_redundant=0	total_non_overlap_reads=108	total_reads=109	unique_read_sequence=AT
+RA	32		REL606	648692	0	C	T	frequency=1	new_cov=60/34	quality=273.0	ref_cov=1/0	tot_cov=62/34
+JC	25		REL606	664686	1	REL606	4613019	-1	0	alignment_overlap=0	coverage_minus=45	coverage_plus=38	flanking_left=35	flanking_right=35	key=REL606__664686__1__REL606__4613019__0__0____35__35__0__0	max_left=32	max_left_minus=32	max_left_plus=32	max_min_left=17	max_min_left_minus=17	max_min_left_plus=15	max_min_right=17	max_min_right_minus=17	max_min_right_plus=17	max_right=34	max_right_minus=34	max_right_plus=32	min_overlap_score=826	pos_hash_score=46	side_1_annotate_key=repeat	side_1_overlap=0	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=0	side_2_redundant=0	total_non_overlap_reads=83	total_reads=85
+JC	24		REL606	664687	-1	REL606	666134	1	0	alignment_overlap=3	coverage_minus=29	coverage_plus=34	flanking_left=35	flanking_right=35	key=REL606__664687__0__REL606__666131__1__3____35__35__0__0	max_left=31	max_left_minus=31	max_left_plus=30	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=16	max_min_right_minus=16	max_min_right_plus=16	max_right=31	max_right_minus=30	max_right_plus=31	min_overlap_score=536	pos_hash_score=39	side_1_annotate_key=gene	side_1_overlap=3	side_1_redundant=0	side_2_annotate_key=gene	side_2_overlap=0	side_2_redundant=0	total_non_overlap_reads=63	total_reads=85
+JC	20		REL606	666130	-1	REL606	1162792	-1	0	alignment_overlap=0	coverage_minus=56	coverage_plus=43	flanking_left=35	flanking_right=35	key=REL606__666130__0__REL606__1162792__0__0____35__35__1__0	max_left=33	max_left_minus=33	max_left_plus=33	max_min_left=17	max_min_left_minus=17	max_min_left_plus=17	max_min_right=17	max_min_right_minus=17	max_min_right_plus=16	max_right=34	max_right_minus=34	max_right_plus=34	min_overlap_score=917	pos_hash_score=54	side_1_annotate_key=repeat	side_1_overlap=0	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=0	side_2_redundant=0	total_non_overlap_reads=99	total_reads=102
+JC	11		REL606	1092777	-1	REL606	1443893	-1	0	alignment_overlap=2	coverage_minus=51	coverage_plus=56	flanking_left=35	flanking_right=35	key=REL606__1092778__0__REL606__1443894__0__2____35__35__0__1	max_left=32	max_left_minus=32	max_left_plus=32	max_min_left=16	max_min_left_minus=16	max_min_left_plus=16	max_min_right=16	max_min_right_minus=15	max_min_right_plus=16	max_right=32	max_right_minus=31	max_right_plus=32	min_overlap_score=846	pos_hash_score=50	side_1_annotate_key=gene	side_1_overlap=1	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=1	side_2_redundant=1	total_non_overlap_reads=107	total_reads=134
+MC	33		REL606	1092778	1111765	0	1234	left_inside_cov=8	left_outside_cov=132	right_inside_cov=41	right_outside_cov=44
+JC	18		REL606	1162790	1	REL606	3893554	1	0	alignment_overlap=3	coverage_minus=61	coverage_plus=39	flanking_left=35	flanking_right=35	key=REL606__1162788__1__REL606__3893553__1__3____35__35__0__1	max_left=31	max_left_minus=31	max_left_plus=31	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=16	max_min_right_minus=16	max_min_right_plus=16	max_right=31	max_right_minus=31	max_right_plus=31	min_overlap_score=798	pos_hash_score=48	side_1_annotate_key=gene	side_1_overlap=1	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=2	side_2_redundant=1	total_non_overlap_reads=100	total_reads=107
+MC	34		REL606	1270053	1270670	92	102	left_inside_cov=41	left_outside_cov=43	right_inside_cov=41	right_outside_cov=44
+RA	35		REL606	1331794	0	C	A	frequency=1	new_cov=48/50	quality=298.7	ref_cov=0/1	tot_cov=48/51
+JC	22		REL606	1460160	1	REL606	3742143	1	0	alignment_overlap=2	coverage_minus=40	coverage_plus=43	flanking_left=35	flanking_right=35	key=REL606__1460158__1__REL606__3742143__1__2____35__35__1__0	max_left=32	max_left_minus=32	max_left_plus=32	max_min_left=16	max_min_left_minus=16	max_min_left_plus=16	max_min_right=16	max_min_right_minus=16	max_min_right_plus=16	max_right=32	max_right_minus=32	max_right_plus=32	min_overlap_score=772	pos_hash_score=44	side_1_annotate_key=repeat	side_1_overlap=0	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=2	side_2_redundant=0	total_non_overlap_reads=83	total_reads=99
+JC	10		REL606	1462253	-1	REL606	3652533	-1	0	alignment_overlap=3	coverage_minus=38	coverage_plus=69	flanking_left=35	flanking_right=35	key=REL606__1462253__0__REL606__3652536__0__3____35__35__0__1	max_left=31	max_left_minus=31	max_left_plus=30	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=16	max_min_right_minus=16	max_min_right_plus=15	max_right=31	max_right_minus=30	max_right_plus=31	min_overlap_score=836	pos_hash_score=50	side_1_annotate_key=gene	side_1_overlap=3	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=0	side_2_redundant=1	total_non_overlap_reads=107	total_reads=138
+JC	14		REL606	1462320	1	REL606	2775877	-1	0	alignment_overlap=4	coverage_minus=47	coverage_plus=57	flanking_left=35	flanking_right=35	key=REL606__1462318__1__REL606__2775879__0__4____35__35__0__1	max_left=30	max_left_minus=30	max_left_plus=30	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=15	max_min_right_minus=15	max_min_right_plus=15	max_right=30	max_right_minus=30	max_right_plus=29	min_overlap_score=789	pos_hash_score=48	side_1_annotate_key=gene	side_1_overlap=2	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=2	side_2_redundant=1	total_non_overlap_reads=104	total_reads=127
+MC	36		REL606	1607938	1616704	1238	1235	left_inside_cov=41	left_outside_cov=45	right_inside_cov=41	right_outside_cov=48
+RA	37		REL606	1691510	0	G	A	frequency=1	new_cov=46/55	quality=279.6	ref_cov=2/0	tot_cov=48/56
+RA	38		REL606	1733343	0	G	A	frequency=1	new_cov=56/50	quality=330.3	ref_cov=0/0	tot_cov=56/50
+RA	39		REL606	1780026	0	G	.	frequency=1	new_cov=44/46	quality=339.2	ref_cov=10/12	tot_cov=54/58
+JC	8		REL606	1821484	-1	REL606	2775877	-1	0	alignment_overlap=3	coverage_minus=65	coverage_plus=58	flanking_left=35	flanking_right=35	key=REL606__1821486__0__REL606__2775878__0__3____35__35__0__1	max_left=31	max_left_minus=31	max_left_plus=31	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=16	max_min_right_minus=16	max_min_right_plus=16	max_right=31	max_right_minus=31	max_right_plus=31	min_overlap_score=1100	pos_hash_score=52	side_1_annotate_key=gene	side_1_overlap=1	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=2	side_2_redundant=1	total_non_overlap_reads=123	total_reads=152
+RA	40		REL606	1886011	0	C	A	frequency=1	new_cov=33/28	quality=181.6	ref_cov=1/0	tot_cov=34/28
+RA	41		REL606	1893446	0	A	.	frequency=1	new_cov=33/37	quality=358.7	ref_cov=1/0	tot_cov=34/37
+RA	42		REL606	2333539	1	.	T	frequency=1	new_cov=45/38	quality=253.9	ref_cov=0/0	tot_cov=45/38
+RA	43		REL606	2446984	0	A	C	frequency=1	new_cov=38/68	quality=270.0	ref_cov=0/0	tot_cov=38/68
+RA	44		REL606	2665639	0	A	T	frequency=1	new_cov=60/47	quality=319.9	ref_cov=0/1	tot_cov=60/48
+MC	45		REL606	2772685	2775857	0	1431	left_inside_cov=41	left_outside_cov=44	right_inside_cov=39	right_outside_cov=43
+JC	26		REL606	2772710	-1	REL606	2774196	-1	0	alignment_overlap=4	coverage_minus=47	coverage_plus=13	flanking_left=35	flanking_right=35	key=REL606__2772713__0__REL606__2774197__0__4____35__35__1__1	max_left=30	max_left_minus=30	max_left_plus=28	max_min_left=14	max_min_left_minus=14	max_min_left_plus=14	max_min_right=15	max_min_right_minus=15	max_min_right_plus=14	max_right=30	max_right_minus=30	max_right_plus=30	min_overlap_score=456	pos_hash_score=37	side_1_annotate_key=repeat	side_1_overlap=1	side_1_redundant=1	side_2_annotate_key=repeat	side_2_overlap=3	side_2_redundant=1	total_non_overlap_reads=60	total_reads=73
+RA	46		REL606	2999330	0	G	A	frequency=1	new_cov=71/35	quality=329.3	ref_cov=0/1	tot_cov=71/36
+JC	4		REL606	3015773	-1	REL606	3652533	-1	0	alignment_overlap=3	coverage_minus=51	coverage_plus=52	flanking_left=35	flanking_right=35	key=REL606__3015774__0__REL606__3652535__0__3____35__35__0__1	max_left=31	max_left_minus=31	max_left_plus=31	max_min_left=15	max_min_left_minus=15	max_min_left_plus=13	max_min_right=16	max_min_right_minus=16	max_min_right_plus=16	max_right=34	max_right_minus=31	max_right_plus=34	min_overlap_score=852	pos_hash_score=49	side_1_annotate_key=gene	side_1_overlap=2	side_1_redundant=0	side_2_annotate_key=repeat	side_2_overlap=1	side_2_redundant=1	total_non_overlap_reads=103	total_reads=183
+RA	47		REL606	3152406	0	A	C	frequency=1	new_cov=40/55	quality=234.4	ref_cov=2/2	tot_cov=42/57
+RA	48		REL606	3183348	0	G	A	frequency=1	new_cov=20/55	quality=215.1	ref_cov=2/0	tot_cov=23/55
+RA	49		REL606	3339313	0	A	C	frequency=1	new_cov=70/62	quality=351.3	ref_cov=0/2	tot_cov=70/64
+RA	50		REL606	3401754	0	C	A	frequency=1	new_cov=32/43	quality=225.8	ref_cov=0/0	tot_cov=32/44
+RA	51		REL606	3475057	0	C	T	frequency=1	new_cov=51/41	quality=268.1	ref_cov=1/3	tot_cov=52/44
+RA	52		REL606	3481820	0	A	G	frequency=1	new_cov=54/38	quality=222.9	ref_cov=2/2	tot_cov=56/40
+JC	9		REL606	3651091	1	REL606	4110237	1	0	alignment_overlap=3	coverage_minus=56	coverage_plus=69	flanking_left=35	flanking_right=35	key=REL606__3651090__1__REL606__4110235__1__3____35__35__1__0	max_left=31	max_left_minus=31	max_left_plus=31	max_min_left=15	max_min_left_minus=13	max_min_left_plus=15	max_min_right=16	max_min_right_minus=16	max_min_right_plus=16	max_right=31	max_right_minus=31	max_right_plus=31	min_overlap_score=962	pos_hash_score=52	side_1_annotate_key=repeat	side_1_overlap=2	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=1	side_2_redundant=0	total_non_overlap_reads=125	total_reads=141
+JC	15		REL606	3652533	-1	REL606	4613020	1	0	alignment_overlap=2	coverage_minus=55	coverage_plus=55	flanking_left=35	flanking_right=35	key=REL606__3652534__0__REL606__4613019__1__2____35__35__1__0	max_left=32	max_left_minus=32	max_left_plus=32	max_min_left=16	max_min_left_minus=16	max_min_left_plus=16	max_min_right=16	max_min_right_minus=11	max_min_right_plus=16	max_right=32	max_right_minus=32	max_right_plus=32	min_overlap_score=824	pos_hash_score=53	side_1_annotate_key=repeat	side_1_overlap=1	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=1	side_2_redundant=0	total_non_overlap_reads=110	total_reads=124
+MC	53		REL606	3741217	3742142	751	0	left_inside_cov=41	left_outside_cov=42	right_inside_cov=3	right_outside_cov=98
+MC	54		REL606	3893576	3901456	1420	0	left_inside_cov=41	left_outside_cov=44	right_inside_cov=0	right_outside_cov=118
+JC	16		REL606	3894996	-1	REL606	3901457	1	0	alignment_overlap=4	coverage_minus=53	coverage_plus=45	flanking_left=35	flanking_right=35	key=REL606__3894999__0__REL606__3901456__1__4____35__35__1__0	max_left=30	max_left_minus=30	max_left_plus=30	max_min_left=15	max_min_left_minus=15	max_min_left_plus=15	max_min_right=15	max_min_right_minus=15	max_min_right_plus=15	max_right=30	max_right_minus=30	max_right_plus=29	min_overlap_score=797	pos_hash_score=50	side_1_annotate_key=repeat	side_1_overlap=1	side_1_redundant=1	side_2_annotate_key=gene	side_2_overlap=3	side_2_redundant=0	total_non_overlap_reads=98	total_reads=124
+RA	55		REL606	3909807	0	G	T	frequency=1	new_cov=32/39	quality=205.6	ref_cov=2/2	tot_cov=34/41
+RA	56		REL606	3911972	0	T	.	frequency=1	new_cov=13/21	quality=162.2	ref_cov=2/0	tot_cov=15/21
+RA	57		REL606	4100183	0	A	G	frequency=1	new_cov=46/66	quality=299.3	ref_cov=1/1	tot_cov=47/67
+RA	58		REL606	4111342	0	C	T	frequency=1	new_cov=59/64	quality=342.6	ref_cov=3/2	tot_cov=62/66
+RA	59		REL606	4177963	0	T	G	frequency=1	new_cov=26/37	quality=167.0	ref_cov=1/0	tot_cov=27/37
+RA	60		REL606	4431394	0	G	.	frequency=1	new_cov=38/48	quality=441.6	ref_cov=1/0	tot_cov=39/48
+RA	61		REL606	4431395	0	G	.	frequency=1	new_cov=38/48	quality=442.8	ref_cov=1/0	tot_cov=39/48
+RA	62		REL606	4616538	0	A	C	frequency=1	new_cov=54/64	quality=304.2	ref_cov=1/2	tot_cov=55/66
