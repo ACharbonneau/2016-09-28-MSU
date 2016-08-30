@@ -7,7 +7,7 @@ minutes: 30
 
 ```{r, echo=FALSE, purl=FALSE, message = FALSE}
 # source("setup.R")
-metadata <- read.csv("../files/Ecoli_metadata.csv")
+metadata <- read.csv("files/Ecoli_metadata.csv")
 ```
 
 ```{r, echo=FALSE, purl=TRUE}

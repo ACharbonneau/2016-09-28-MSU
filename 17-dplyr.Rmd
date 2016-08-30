@@ -6,7 +6,7 @@ author: Data Carpentry contributors
 
 ```{r, echo=FALSE, purl=FALSE, message = FALSE}
 # source("setup.R")
-metadata <- read.csv("../files/Ecoli_metadata.csv")
+metadata <- read.csv("files/Ecoli_metadata.csv")
 ```
 
 ------------

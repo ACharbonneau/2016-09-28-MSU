@@ -6,7 +6,7 @@ minutes: 30
 ---
 
 ```{r, echo=FALSE}
-metadata <- read.csv('../files/Ecoli_metadata.csv')
+metadata <- read.csv('files/Ecoli_metadata.csv')
 ```
 
 > ## Learning Objectives {.objectives}
