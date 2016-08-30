@@ -12,9 +12,10 @@ startdate: 2016-09-28      # use YYYY-MM-DD format like 2015-01-01
 enddate: 2016-09-29        # use YYYY-MM-DD format like 2015-01-02
 instructor: ["Amanda Charbonneau", "Will Pitchers"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Anne Sonnenschein"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: "Camille Archer"      # contact email address for workshop organizer, such as "grace@hopper.org"
+contact: "archerc5@msu.edu"      # contact email address for workshop organizer, such as "grace@hopper.org"
 etherpad:         # optional (insert the URL for your Etherpad if you're using one)
 eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
+
 day1_am: "Day 1 is in BPS 2215F"
 day1_am: "Data organization in spreadsheets and OpenRefine"
 day1_pm: "Introduction to R"
@@ -139,34 +140,198 @@ Participants should bring their laptops and plan to participate actively. By the
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 -->
-<h2>Preliminary Schedule</h2>
-
-<!-- DO NOT EDIT SURVEY LINKS -->
-<p><em>Surveys</em></p>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href='{{ site.dc_pre_survey }}'>Pre-workshop Survey</a></p>
-<p><a href='{{ site.dc_post_survey }}'>Post-workshop Survey</a></p>
 
 
+<h2>Agenda and Lessons</h2>
 
 <div class="row">
   <div class="col-md-6">
-
-    <h3>Day 1</h3>
+    <h3>Day 1: 9AM - 5PM in BPS 2215F</h3>
     <table class="table table-striped">
-      <tr> <td>Morning</td>  <td>{{page.day1_am}}</td> </tr>
-       <tr> <td>Afternoon</td>  <td>{{page.day1_pm}}</td> </tr>
-    </table>
- 
- 
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td>  <td>{{page.day2_am}}</td> </tr>
-      <tr> <td>Afternoon</td>  <td>{{page.day2_pm}}</td> </tr>
-    </table>
- </div>
-</div>
+    	<tr>
+    		<td colspan=2>
+    			If you have not already done so, please complete the
+    			<a href="https://www.surveymonkey.com/r/dc_pre_workshop_v1">pre-workshop survey</a>
+    			</td>
+    	</tr>
+      <tr> 
+        <th style="background:gainsboro">Intro, Data Processing, and Organization</th>
+	<th style="background:gainsboro">Instructor</th>
+      </tr>
+      <tr>
+          <td>
+              <a href="http://www.datacarpentry.org/2016-01-19-sbu/DataCarpentry_Intro.pdf">Intro to Data Carpentry</a>
+          </td>
+          <td>
+              Sheldon
+          </td>
+      </tr>
+            <tr>
+          <td>
+              <a href="https://jasonjwilliamsny.github.io/cloud-genomics/" target="_data">Getting started with cloud computing</a>
+          </td>
+          <td>
+              Sheldon
+          </td>
+      </tr>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/JasonJWilliamsNY/datadescription-genomics/blob/master/lessons/01-intro-to-ecoli-evo-experient.md"
+          	target="_data">
+          	Introduction to the data</a>
+        </td>
+        <td>
+            Sheldon
+        </td>
+      </tr>
+      <tr>
+          <td>
+              <a target="_data" href="http://www.datacarpentry.org/2015-08-24-ISU/lessons/00-intro-to-data-tidy.html">
+              Data tidiness</a>
+          </td>
+          <td>
+              Sheldon
+          </td>
+      </tr>
+      <tr>
+        <td>
+          <a target="_data" href="https://github.com/JasonJWilliamsNY/datadescription-genomics/blob/master/lessons/02-examining-sra-runtable.md">
+            Getting started with the data
+          </a>
+        </td>
+        <td>
+            Sheldon
+        </td>
+      </tr>
+	<tr>
+         <td>
+          <a href="https://github.com/JasonJWilliamsNY/organization-genomics/blob/gh-pages/lessons/01_intro_organization.md">
+            Getting your project started
+          </a>
+        </td>
+        <td>
+        	Ivan
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+            <a href="http://www.datacarpentry.org/shell-genomics/lessons/">
+              Command line exploration of the data (unix shell)
+            </a>
+        </td>
+        <td>
+        	     Ivan
+        </td>
+      </tr>
 
+    </table>
+</p>
+<p>
+<h3>Day 2: 9AM - 5PM BPS 2245</h3>
+    <table class="table table-striped">
+      <tr> 
+        <td style="background:gainsboro">NGS Data analysis</td>
+	<td style="background:gainsboro">Instructor</td>
+      </tr>
+       <tr>
+        <td>
+          <a href="https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/00-readQC.md">
+            Quality Control of NGS Data
+          </a>
+        </td>
+        <td>
+        	Sheldon
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/JasonJWilliamsNY/knowyourdata-genomics/blob/gh-pages/lessons/01-know_your_data.md">
+            Know your data
+          </a>
+        </td>
+        <td>
+        	Sheldon
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/01-automating_a_workflow.md">
+            Automating a workflow with a shell script
+          </a>
+        </td>
+        <td>
+        		Sheldon
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/JasonJWilliamsNY/wrangling-genomics/blob/gh-pages/lessons/02-variant-calling-workflow.md">
+          Automating a variant calling workflow
+          </a>
+        </td>
+        <td>
+        	Sheldon
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2 style="background:gainsboro">
+          {{page.day2_pm}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <a href=http://mlammens.github.io/R-genomics/>Data analysis and visualization with R</a> 
+        </td>
+        <td>
+Ivan
+        </td>
+      </tr>
+            <tr>
+        <td colspan=2 style="background:gainsboro">
+          Wrap-up
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/JasonJWilliamsNY/cloud-genomics/blob/master/lessons/05.Data-rountripping.md">
+            Moving Your Data</a>
+        </td>
+        <td>
+        	Ivan
+        </td>
+      </tr>
+      <tr>
+        <td>
+            Please complete the <a href="https://www.surveymonkey.com/r/dc_post_workshop_v1">post-workshop Survey</a> before you leave.
+        </td>
+        <td>
+          Everyone
+        </td>
+    </table>
+    <h3>Post-Workshop (or using these lessons on your own)</h3>
+    <table class="table table-striped">
+      <tr> 
+        <td colspan=2 style="background:gainsboro">Launching cloud instances after the workshop</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/JasonJWilliamsNY/cloud-genomics/blob/master/lessons/1.logging-onto-cloud.md">
+            Launching your own instance</a><br>
+          Note: Start here if you are working on the lessons on your own
+        </td>
+        <td>
+          On your own
+        </td>
+      </tr>
+    </table>
+</p></a>
+
+
+
+
+<hr/>
 <!--
   ETHERPAD
 
