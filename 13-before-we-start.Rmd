@@ -6,7 +6,7 @@ minutes: 15
 ---
 
 ```{r, echo=FALSE, purl=FALSE}
-knitr::opts_chunk$set(results='hide', fig.path='../files//r-lesson-')
+knitr::opts_chunk$set(results='hide', fig.path='files/r-lesson-')
 ```
 
 ------------
@@ -47,7 +47,7 @@ Start RStudio -- Let's start by learning about our tool.
 
 Your working directory should now look like this:
 
-![How it should look like at the beginning of this lesson](../files//r_starting_how_it_should_like.png)
+![How it should look like at the beginning of this lesson](files/r_starting_how_it_should_like.png)
 
 
 # Interacting with R
