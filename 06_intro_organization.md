@@ -5,6 +5,8 @@ title: Intro to Organization
 minutes: 20
 ---
 
+[Back: SRA runtables](https://acharbonneau.github.io/2016-09-28-MSU/05-examining-sra-runtable.html)
+
 #Getting your project started
 
 Project organization is one of the most important parts of a sequencing project, but is often overlooked in the excitement to get a first look at new data. While it's best to get yourself organized before you begin analysis,
@@ -174,3 +176,4 @@ If you want an image, just follow the link text in the brackets with an exclamat
 [A Quick Guide to Organizing Computational Biology Projects] (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424)
 
 
+[Next: BASH](https://acharbonneau.github.io/2016-09-28-MSU/07_the_filesystem.html)

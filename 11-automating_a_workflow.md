@@ -5,6 +5,9 @@ title: Shell Scripting
 minutes: 60
 ---
 
+[Back: Know Your Data](https://acharbonneau.github.io/2016-09-28-MSU/10-know_your_data.html)
+
+
 # Lesson
 
 Shell scripts
@@ -123,6 +126,7 @@ named read_qc.sh
 of the script to a file while it is running.
 ****
 
+[Next: Variant Calling](https://acharbonneau.github.io/2016-09-28-MSU/12-variant-calling-workflow.html)
 
 
 

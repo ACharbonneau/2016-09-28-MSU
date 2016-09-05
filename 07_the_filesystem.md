@@ -5,6 +5,8 @@ comments: true
 date: 2014-07-30
 ---
 
+[Back: Organization](https://acharbonneau.github.io/2016-09-28-MSU/06_intro_organization.html)
+
 # The Shell
 
 ## What is the shell?
@@ -623,7 +625,7 @@ Do the following:
 
 1.  Create a backup of your fastq files
 2.  Create a backup directory 
-3.  Copr your backup files there
+3.  Copy your backup files there
 
 * * * *
 
@@ -669,4 +671,4 @@ We're going to come back and use this file in just a bit.
 
 ***
 
-
+[Next: Searching Files](https://acharbonneau.github.io/2016-09-28-MSU/08_searching_files.html)

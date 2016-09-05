@@ -5,6 +5,8 @@ comments: true
 date: 2015-07-30
 ---
 
+[Back: BASH](https://acharbonneau.github.io/2016-09-28-MSU/07_the_filesystem.html)
+
 # The Shell
 
 Author: Sheldon McKay
@@ -234,3 +236,6 @@ the command line, automate something you don't really need to automate.
 **Permissions**
 
 **Chaining commands together**
+
+
+[Next: Quality Control](https://acharbonneau.github.io/2016-09-28-MSU/09-readQC.html)

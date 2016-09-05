@@ -5,6 +5,8 @@ title: examining SRA run table
 minutes: 20
 ---
 
+[Back: Tidy Data](https://acharbonneau.github.io/2016-09-28-MSU/04-intro-to-data-tidy.html)
+
 ## Learning Objectives 
 
 * Get a general understanding of the NCBI SRA
@@ -57,17 +59,17 @@ During the shell lesson we will go much more step-by-step, building our way thro
 1. Follow you instructor's direction to navigate to the sample SraRunTable.txt file that has be placed on your remote computer
 
     ```bash
-$ cd ~/dc_sample_data/sra_metadata
-```
+	$ cd ~/dc_sample_data/sra_metadata
+	```
 2. Display the contents of the SraRunTable.txt on your screen
     ```bash
-$ cat SraRunTable.txt
-```
+	$ cat SraRunTable.txt
+	```
 3. That's probably not too pretty, so lets view it in a little more organized a format
 
     ```bash
-$ column -t SraRunTable.txt
-```
+	$ column -t SraRunTable.txt
+	```
 4. In this case we are using the 'column' program to make the print out more pretty. 
 
 
@@ -92,3 +94,6 @@ For the purposes of this workshop, we will be working with 6 of the fastq reads 
 
 * You can learn more about the SRA by reading the [SRA Documentation](http://www.ncbi.nlm.nih.gov/Traces/sra/)
 * The best way to transfer a large SRA dataset is by using the [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/?view=toolkit_doc)
+
+[Next: Organization](https://acharbonneau.github.io/2016-09-28-MSU/06_intro_organization.html)
+

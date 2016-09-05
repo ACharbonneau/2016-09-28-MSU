@@ -6,6 +6,8 @@ minutes: 20
 author: Adina Howe
 ---
 
+[Back: Intro to Dataset](https://acharbonneau.github.io/2016-09-28-MSU/03-intro-to-ecoli-evo-experient.html)
+
 ## Learning Objectives
 
 * Gain a general understanding of data organization
@@ -108,3 +110,4 @@ This lesson is a bit challenging as there is no "right" answer that can be unive
 
 As we go through the next couple days, you are going to learn ways to automate data access and analysis.  Try to think of why standard names and organization structures will impact these activities.
 
+[Next: SRA runtables](https://acharbonneau.github.io/2016-09-28-MSU/05-examining-sra-runtable.html)

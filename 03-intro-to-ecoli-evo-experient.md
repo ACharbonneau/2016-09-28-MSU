@@ -5,6 +5,8 @@ title: Intro to ecoli evo experiment
 minutes: 5
 ---
 
+[Back: Intro to HPC](https://acharbonneau.github.io/2016-09-28-MSU/02-IntroHPC.html)
+
 ## Learning Objectives 
 * Have a general idea of the experiment and its objectives
 * Understand how and why we choose this dataset
@@ -19,8 +21,11 @@ Without going to deeply into the science of the paper (which the reader can revi
 * Dataset publicly available - in this case through the NCBI Sequence Read Archive (http://www.ncbi.nlm.nih.gov/sra)
 * Small file sizes - while several of related files may still be hundreds of MBs, overall we will be able to get through more quickly then if we worked with a larger eukaryotic genome
 
-####References
+#### References
 
 Blount, Z.D., Barrick, J.E., Davidson, C.J., Lenski, R.E.
 Genomic analysis of a key innovation in an experimental Escherichia coli population
 (2012) Nature, 489 (7417), pp. 513-518.
+
+
+[Next: Tidy Data](https://acharbonneau.github.io/2016-09-28-MSU/04-intro-to-data-tidy.html)

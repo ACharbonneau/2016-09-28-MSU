@@ -5,6 +5,8 @@ title: Lesson QC of Sequence Read Data
 minutes: 60
 ---
 
+[Back: Searching Files](https://acharbonneau.github.io/2016-09-28-MSU/08_searching_files.html)
+
 # Lesson QC of Sequence Read Data
 
 Quality Control of NGS Data
@@ -97,34 +99,34 @@ The main functions of FastQC are
 
 1. Create a working directory for your analysis
    
-    ```bash
+	```bash
     $ cd
     # this command takes us to the home directory
     
     $ mkdir dc_workshop
-    ```
+	```
 2. Create three three subdirectories
 
-   ```bash
-    mkdir dc_workshop/data
+	```bash
+	mkdir dc_workshop/data
     mkdir dc_workshop/docs
     mkdir dc_workshop/results
-```
+	```
 
   > The sample data we will be working with is in a hidden directory (placing a '.' in front of a directory name hides the directory. In the next step we will move some of those hidden files into our new dirctories to start our project. 
 3. Move our sample data to our working (home) directory
    
-   ```bash 
-$ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
-```
+	```bash 
+	$ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
+	```
 
 ###B. Run FastQC
 
 1. Navigate to the initial fastq dataset
    
-    ```bash
-    $ cd ~/dc_workshop/data/untrimmed_fastq/
-    ```
+	```bash
+	$ cd ~/dc_workshop/data/untrimmed_fastq/
+	```
 To run the fastqc program, we call it from its location in ``~/FastQC``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard.
 2. Run FastQC on all fastq files in the directory
 
@@ -146,34 +148,37 @@ Lets examine the results in detail
 
 1. Navigate to the results and view the directory contents
 
-   ```bash
-$ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
-$ ls
-```
+	```bash
+	$ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
+	$ ls
+	```
    
  > The zip files need to be unpacked with the 'unzip' program.  
 2. Use unzip to unzip the FastQC results: 
-   ```bash
-$ unzip *.zip
-```
+	
+	```bash
+	$ unzip *.zip
+	```
+
 Did it work? No, because 'unzip' expects to get only one zip file.  Welcome to the real world. We *could* do each file, one by one, but what if we have 500 files?  There is a smarter way. We can save time by using a simple shell 'for loop' to iterate through the list of files in *.zip. After you type the first line, you will get a special '>' prompt to type next next lines. You start with 'do', then enter your commands, then end with 'done' to execute the loop.
 3. Build a ``for`` loop to unzip the files
 
-   ```bash 
-$ for zip in *.zip
-> do
-> unzip $zip
-> done
-```
+	```bash 
+	$ for zip in *.zip
+	> do
+	> unzip $zip
+	> done
+	```
 
   Note that, in the first line, we create a variable named 'zip'.  After that, we call that variable with the syntax $zip.  $zip is assigned the value of each item (file) in the list *.zip, once for each iteration of the loop.
 
 This loop is basically a simple program.  When it runs, it will run unzip once for each file (whose name is stored in the $zip variable). The contents of each file will be unpacked into a separate directory by the unzip program.
 
 The for loop is interpreted as a multipart command.  If you press the up arrow on your keyboard to recall the command, it will be shown like so:
-   ```bash
+
+	```bash
     for zip in *.zip; do echo File $zip; unzip $zip; done
-```
+	```
 
 When you check your history later, it will help your remember what you did!
 
@@ -181,9 +186,9 @@ When you check your history later, it will help your remember what you did!
 
 To save a record, let's cat all fastqc summary.txts into one full_report.txt and move this to ``~/dc_workshop/docs``. You can use wildcards in paths as well as file names.  Do you remember how we said 'cat' is really meant for concatenating text files?
 
-```bash    
-cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
-```
+	```bash    
+	cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
+	```
 
 
 ##How to clean reads using *Trimmomatic*
@@ -226,25 +231,27 @@ This command tells *Trimmomatic* to run on a Single End file (``SRR_0156.fastq``
 
 1. Go to the untrimmed fastq data location:
 
-   ```bash
-$ cd /home/dcuser/dc_workshop/data/untrimmed_fastq
-```
+	```bash
+	$ cd /home/dcuser/dc_workshop/data/untrimmed_fastq
+	```
 
 The command line incantation for trimmomatic is more complicated.  This is where what you have been learning about accessing your command line history will start to become important.
 
 The general form of the command is:
 
-   ```bash
-java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar inputfile outputfile OPTION:VALUE...
-```    
+	```bash
+	java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar inputfile outputfile OPTION:VALUE...
+	```    
+
 'java -jar' calls the Java program, which is needed to run trimmomargumentstic, which lived in a 'jar' file (trimmomatic-0.32.jar), a special kind of java archive that is often used for programs written in the Java programing language.  If you see a new program that ends in '.jar', you will know it is a java program that is executed 'java -jar program name'.  The 'SE' argument is a keyword that specifies we are working with single-end reads.
 
 The next two arguments are input file and output file names.  These are then followed by a series of options. The specifics of how options are passed to a program are different depending on the program. You will always have to read the manual of a new program to learn which way it expects its command-line arguments to be composed.
 
 
 So, for the single fastq input file 'SRR098283.fastq', the command would be:
-   ```bash
-$ java -jar /home/dcuser/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR098283.fastq \
+
+	```bash
+	$ java -jar /home/dcuser/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR098283.fastq \
     SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
 
     TrimmomaticSE: Started with arguments: SRR098283.fastq SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
@@ -252,30 +259,32 @@ $ java -jar /home/dcuser/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR098283.fast
     Quality encoding detected as phred33
     Input Reads: 21564058 Surviving: 17030985 (78.98%) Dropped: 4533073 (21.02%)
     TrimmomaticSE: Completed successfully
-```
+	```
+
 So that worked and we have a new fastq file.
 
-   ```bash
+	```bash
     $ ls SRR098283*
     SRR098283.fastq  SRR098283.fastq_trim.fastq
-```
+	```
 
 Now we know how to run trimmomatic but there is some good news and bad news.  
 One should always ask for the bad news first.  Trimmomatic only operates on 
 one input file at a time and we have more than one input file.  The good news?
 We already know how to use a for loop to deal with this situation.
 
-```bash
-$ for infile in *.fastq
+	```bash
+	$ for infile in *.fastq
     >do
     >outfile=$infile\_trim.fastq
     >java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar SE $infile $outfile SLIDINGWINDOW:4:20 MINLEN:20
     >done
-```
+	```
 
 Do you remember how the first specifies a variable that is assigned the value of each item in the list in turn?  We can call it whatever we like.  This time it is called infile.  Note that the third line of this for loop is creating a second variable called outfile.  We assign it the value of $infile with '_trim.fastq' appended to it.  The '\' escape character is used so the shell knows that whatever follows \ is not part of the variable name $infile.  There are no spaces before or after the '='.
 
 
+[Next: Searching Files](https://acharbonneau.github.io/2016-09-28-MSU/10-know_your_data.html)
 
 
 
