@@ -1,3 +1,10 @@
+---
+layout: lesson
+root: .
+title: Lesson QC of Sequence Read Data
+minutes: 60
+---
+
 # Lesson QC of Sequence Read Data
 
 Quality Control of NGS Data

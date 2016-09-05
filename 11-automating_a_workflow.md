@@ -1,3 +1,10 @@
+---
+layout: lesson
+root: .
+title: Shell Scripting
+minutes: 60
+---
+
 # Lesson
 
 Shell scripts

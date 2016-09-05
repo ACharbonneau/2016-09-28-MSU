@@ -1,3 +1,10 @@
+---
+layout: lesson
+root: .
+title: Getting to know your data
+minutes: 30
+---
+
 Getting to know your data
 ===================
 

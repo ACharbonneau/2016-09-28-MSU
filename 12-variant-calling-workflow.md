@@ -1,3 +1,10 @@
+---
+layout: lesson
+root: .
+title: Automating a workflow
+minutes: 40
+---
+
 # Lesson
 
 Automating a workflow

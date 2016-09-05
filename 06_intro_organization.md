@@ -1,3 +1,10 @@
+---
+layout: lesson
+root: .
+title: Intro to Organization
+minutes: 20
+---
+
 #Getting your project started
 
 Project organization is one of the most important parts of a sequencing project, but is often overlooked in the excitement to get a first look at new data. While it's best to get yourself organized before you begin analysis,
