@@ -97,7 +97,7 @@ Discuss:  To keep or not keep Raw data?  What are the advantages?  Disadvantages
 
 Here's what the data organization of the sequencing facility looks like:
 
-<a href="url"><img src="https://raw.githubusercontent.com/datacarpentry/2015-08-24-ISU/master/img/00-seq-facility-data-structure.jpg" width="300" ></a>
+<a href="url"><img src="https://raw.githubusercontent.com/datacarpentry/2015-08-24-ISU/master/img/00-seq-facility-data-structure.jpg" width="400" ></a>
 
 
 ## Exercise.  
