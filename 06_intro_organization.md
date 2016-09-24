@@ -164,7 +164,7 @@ A link is properly written in markdown using a pair of square brackets '[]' foll
 
 If you want an image, just follow the link text in the brackets with an exclamation mark '![ ]\( )'
 <br>
-![Kitten image](kittens.jpg)
+![Kitten image](files/kittens.jpg)
 
 
 **Questions**: <br>
