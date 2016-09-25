@@ -9,6 +9,10 @@ minutes: 15
 knitr::opts_chunk$set(results='hide', fig.path='files/r-lesson-')
 ```
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+		
+[Back: Variant Calling](https://acharbonneau.github.io/2016-09-28-MSU/12-variant-calling-workflow.html)
+
 ------------
 
 > ## Learning Objectives
@@ -235,3 +239,8 @@ sessionInfo()
   mailing lists.
 * [How to ask for R help](http://blog.revolutionanalytics.com/2014/01/how-to-ask-for-r-help.html)
   useful guidelines
+  
+[Next: R Intro](https://acharbonneau.github.io/2016-09-28-MSU/14-intro-to-R.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+

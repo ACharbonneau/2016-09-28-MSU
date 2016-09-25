@@ -5,6 +5,10 @@ author: Data Carpentry contributors
 minutes: 30
 ---
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+		
+[Back: Starting with Data](https://acharbonneau.github.io/2016-09-28-MSU/15-starting-with-data.html)
+
 ```{r, echo=FALSE, purl=FALSE, message = FALSE}
 # source("setup.R")
 metadata <- read.csv("files/Ecoli_metadata.csv")
@@ -167,4 +171,7 @@ You can even access columns by column name _and_ select specific rows of interes
 metadata[4:7, c("strain", "clade")]
 ```
 
+[Next: Dplyr](https://acharbonneau.github.io/2016-09-28-MSU/17-dplyr.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 

@@ -5,6 +5,8 @@ title: Intro to ecoli evo experiment
 minutes: 5
 ---
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+
 [Back: Intro to HPC](https://acharbonneau.github.io/2016-09-28-MSU/02-IntroHPC.html)
 
 ## Learning Objectives 
@@ -29,3 +31,5 @@ Genomic analysis of a key innovation in an experimental Escherichia coli populat
 
 
 [Next: Tidy Data](https://acharbonneau.github.io/2016-09-28-MSU/04-intro-to-data-tidy.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)

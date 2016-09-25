@@ -6,6 +6,8 @@ minutes: 20
 author: Adina Howe
 ---
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+
 [Back: Intro to Dataset](https://acharbonneau.github.io/2016-09-28-MSU/03-intro-to-ecoli-evo-experient.html)
 
 ## Learning Objectives
@@ -104,10 +106,12 @@ Here's what the data organization of the sequencing facility looks like:
 
 You want to test a hypothesis that each day, fraction, and diet will contain genes that are signicantly different under varying treatments.  How does the sequencing facility organization and the organization of files for your analysis differ?  What about the naming of the files?  Are they useful to you?  Draw a data organization structure that you would recommend.
 
-##Concluding notes
+## Concluding notes
 
 This lesson is a bit challenging as there is no "right" answer that can be universally applied for everyone's data organization.  For different questions, you might have data organized in multiple, equally, effective ways.  
 
 As we go through the next couple days, you are going to learn ways to automate data access and analysis.  Try to think of why standard names and organization structures will impact these activities.
 
 [Next: SRA runtables](https://acharbonneau.github.io/2016-09-28-MSU/05-examining-sra-runtable.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)

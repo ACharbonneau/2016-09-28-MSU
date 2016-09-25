@@ -1,9 +1,12 @@
 ---
-layout: page
+layout: lesson
+root: .
 title: "The Shell"
 comments: true
 date: 2014-07-30
 ---
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 
 [Back: Organization](https://acharbonneau.github.io/2016-09-28-MSU/06_intro_organization.html)
 
@@ -27,7 +30,7 @@ knowing how to use the shell is transformative.
 * To use remote computers or cloud computing, you need to use the shell.
 
 
-![Automation](../img/gvng.jpg)
+![Automation](../files/gvng.jpg)
 
   Unix is user-friendly. It's just very selective about who its friends are.
 
@@ -86,22 +89,29 @@ After loggin on, let's check out the example data.
 
 Let's go into the sample data  directory
 
-      cd dc_sample data
+```bash
+$ cd dc_sample data
+```
 
 'cd' stands for 'change directory'
 
-Let's see what is in here. Type
-      ls
+Let's see what is in here. Type ```ls```
 
-You will see
-    sra_metadata  untrimmed_fastq
+You will see:
 
-ls stands for 'list' and it lists the contents of a directory.
+```
+	sra_metadata  untrimmed_fastq
+```
+
+```ls``` stands for 'list' and it lists the contents of a directory.
 
 There are two items listed.  What are they? We can use a command line argumant with 'ls' to get more information.
 
-      ls -F
-      sra_metadata/  untrimmed_fastq/
+```bash
+$ls -F
+
+	sra_metadata/  	untrimmed_fastq/
+```
 
 Anything with a "/" after it is a directory.  
 Things with a "*" after them are programs.  
@@ -109,21 +119,24 @@ It there are nodecorations, it's a file.
 
 You can also use the command
 
-    ls -l
+```bash
+$ls -l
     drwxr-x--- 2 dcuser sudo 4096 Jul 30 11:37 sra_metadata
     drwxr-xr-x 2 dcuser sudo 4096 Jul 30 11:38 untrimmed_fastq
+```
 
 to see whether items in a directory are files or directories. `ls -l` gives a lot more
 information too.
 
 Let's go into the untrimmed_fastq directory and see what is in there.
 
-    cd untrimmed_fastq
-    ls -F
+```bash
+$ cd untrimmed_fastq
+# ls -F
     SRR097977.fastq  SRR098026.fastq
+```
 
 There are two items in this directory with no trailing slash, so they are files.
-
 
 ## Arguments
 
@@ -136,7 +149,9 @@ know what the options are to particular commands?
 Most commonly used shell programs have a manual. You can access the
 manual using the `man` program. Try entering:
 
-    man ls
+```bash
+$ man ls
+```
 
 This will open the manual page for `ls`. Use the space key to go
 forward and b to go backwards. When you are done reading, just hit `q`
@@ -179,7 +194,7 @@ This is called a hierarchical file system structure, like an upside down tree
 with root (/) at the base that looks like this.
 
 
-![Unix](../img/Slide1.jpg)
+![Unix](../files/Slide1.jpg)
 
 That (/) at the base is often also called the 'top' level.
 
@@ -188,9 +203,11 @@ you are on one of the branches of that tree, your home directory (/home/dcuser)
 
 Now let's go do that same navigation at the command line.
 
-Type
+Type 
 
-     cd
+```bash
+$ cd
+```
 
 This puts you in your home directory. This folder here.
 
@@ -201,7 +218,9 @@ in the file system, it's easy to lose track of where we are and get lost.
 
 If you want to know what directory you're currently in, type
 
-     pwd
+```bash
+$ pwd
+```
 
 This stands for 'print working directory'. The directory you're currently working in.
 
@@ -212,7 +231,9 @@ To go 'back up a level' we need to use `..`
 
 Type
 
-     cd ..
+```bash
+$ cd ..
+```
 
 Now do `ls` and `pwd`. See now that we went back up in to the 'dc_sample_data'
 directory. `..` means go back up a level.
@@ -237,19 +258,25 @@ home directory if you are not already there.
 
 Type:
 
-    cd
+```bash
+$ cd
+```
 
 Then enter the command:
 
-    ls dc_sample_data
+```bash
+$ ls dc_sample_data
+```
 
 This will list the contents of the `dc_sample_data` directory without
 you having to navigate there.
 
 The `cd` command works in a similar way. Try entering:
 
-    cd
-    cd dc_sample_data/untrimmed_fastq
+```bash
+$ cd
+$ cd dc_sample_data/untrimmed_fastq
+```
 
 and you will jump directly to `untrimmed_fastq` without having to go through
 the intermediate directory.
@@ -257,7 +284,7 @@ the intermediate directory.
 ****
 **Exercise**
 
-List the 'SRR097977.fastq' file from your home directory without changing directories
+List the `SRR097977.fastq` file from your home directory without changing directories
 ****
 
 ### Shortcut: Tab Completion
@@ -340,7 +367,7 @@ navigate amongst them.
 ***
 **Exercise**
 
-Now, list the contents of the /bin directory. Do you see anything
+Now, list the contents of the `/bin` directory. Do you see anything
 familiar in there? 
 How can you tell these are programs rather than plain files?
 
@@ -410,7 +437,7 @@ Lists every file in `/usr/bin` that ends in the characters `.sh`.
 
     ls *977.fastq
 
-lists only the file that ends with '977.fastq'
+lists only the file that ends with `977.fastq`
 
 So how does this actually work? Well...when the shell (bash) sees a
 word that contains the `*` character, it automatically looks for filenames
@@ -418,10 +445,12 @@ that match the given pattern.
 
 We can use the command 'echo' to see wilcards are they are intepreted by the shell.
 
-   echo *.fastq
-   SRR097977.fastq SRR098026.fastq
+```bash
+$ echo *.fastq
+	SRR097977.fastq SRR098026.fastq
+```
 
-The '*' is expanded to include any file that ends with '.fastq'
+The '*' is expanded to include any file that ends with `.fastq`
 
 
 ****
@@ -434,7 +463,7 @@ navigating to a different directory.
 2.  List all of the files in `/bin` that contain the letter 'a'
 3.  List all of the files in `/bin` that end with the letter 'o'
 
-BONUS: List all of the files in '/bin' that contain the letter 'a' or 'c'
+BONUS: List all of the files in `/bin` that contain the letter 'a' or 'c'
 
 ****
 
@@ -474,7 +503,7 @@ then you could repeat command #260 by simply entering:
 **Exercise**
 
 1. Find the line number in your history for the last exercise (listing
-files in /bin) and reissue that command.
+files in `/bin`) and reissue that command.
 
 ****
 
@@ -558,9 +587,10 @@ The `-n` option to either of these commands can be used to print the
 first or last `n` lines of a file. To print the first/last line of the
 file use:
 
+```bash
 head -n 1 SRR098026.fastq
 tail -n 1 SRR098026.fastq
-
+```
 
 ## Creating, moving, copying, and removing
 
@@ -580,7 +610,7 @@ command backs up the file. Navigate to the `data` directory and enter:
 
     cp SRR098026.fastq SRR098026-copy.fastq
     ls -F
-    SRR097977.fastq  SRR098026-copy.fastq  SRR098026.fastq 
+    	SRR097977.fastq  SRR098026-copy.fastq  SRR098026.fastq 
 
 Now SRR098026-copy.fastq has been created as a copy of SRR098026.fastq
 
@@ -650,11 +680,11 @@ a file that contains the favorite grep command so you can remember it for later.
 
 Now you have something that looks like
 
-![nano1.png](../img/nano1.png)
+![nano1.png](../files/nano1.png)
 
 Type in your command, so it looks like
 
-![nano2.png](../img/nano2.png)
+![nano2.png](../files/nano2.png)
 
 Now we want to save the file and exit. At the bottom of nano, you see the "^X Exit". That
 means that we use Ctrl-X to exit. Type `Ctrl-X`. It will ask if you want to save it. Type `y` for yes.
@@ -665,10 +695,12 @@ Now you've written a file. You can take a look at it with less or cat, or open i
 ***
 **Exercise**
 
-Open 'awesome.sh' and add "echo AWESOME!" after the grep command and save the file.
+Open `awesome.sh` and add "echo AWESOME!" after the grep command and save the file.
 
 We're going to come back and use this file in just a bit.
 
 ***
 
 [Next: Searching Files](https://acharbonneau.github.io/2016-09-28-MSU/08_searching_files.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)

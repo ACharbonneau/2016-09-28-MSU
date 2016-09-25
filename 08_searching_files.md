@@ -1,15 +1,19 @@
---
-layout: page
+---
+layout: lesson
+root: .
 title: "The Shell"
 comments: true
 date: 2015-07-30
+author: Sheldon McKay
 ---
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 
 [Back: BASH](https://acharbonneau.github.io/2016-09-28-MSU/07_the_filesystem.html)
 
 # The Shell
 
-Author: Sheldon McKay
+
 
 Adapted from the lesson by Tracy Teal.
 Original contributors:
@@ -239,3 +243,5 @@ the command line, automate something you don't really need to automate.
 
 
 [Next: Quality Control](https://acharbonneau.github.io/2016-09-28-MSU/09-readQC.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)

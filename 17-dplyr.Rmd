@@ -4,6 +4,10 @@ title: Aggregating and analyzing data with dplyr
 author: Data Carpentry contributors
 ---
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+		
+[Back: Data frames](https://acharbonneau.github.io/2016-09-28-MSU/16-data-frames.html)
+
 ```{r, echo=FALSE, purl=FALSE, message = FALSE}
 # source("setup.R")
 metadata <- read.csv("files/Ecoli_metadata.csv")
@@ -216,3 +220,7 @@ metadata %>%
 [Handy dplyr cheatsheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 *Much of this lesson was copied or adapted from Jeff Hollister's [materials](http://usepa.github.io/introR/2015/01/14/03-Clean/)*
+
+[Next: Data Viz](https://acharbonneau.github.io/2016-09-28-MSU/18-data-visualization.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)

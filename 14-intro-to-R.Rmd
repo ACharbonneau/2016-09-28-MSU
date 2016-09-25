@@ -9,6 +9,9 @@ minutes: 45
 knitr::opts_chunk$set(results='hide', fig.path='files/r-lesson-')
 ```
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+		
+[Back: Before we start](https://acharbonneau.github.io/2016-09-28-MSU/13-before-we-start.html)
 ------------
 
 > ## Learning Objectives
@@ -367,6 +370,9 @@ Vectors are one of the many **data structures** that R uses. Other important
 ones are lists (`list`), matrices (`matrix`), data frames (`data.frame`) and
 factors (`factor`).
 
+[Next: Starting with data](https://acharbonneau.github.io/2016-09-28-MSU/15-starting-with-data.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 
 
 

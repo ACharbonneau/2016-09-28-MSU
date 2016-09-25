@@ -1,17 +1,18 @@
 ---
 layout: lesson
 root: .
-title: Automating a workflow
+title: Variant Calling Automation
 minutes: 40
 ---
 
-# Lesson
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+		
+[Back: Automation](https://acharbonneau.github.io/2016-09-28-MSU/11-automating_a_workflow.html)
 
-Automating a workflow
-===================
 
 Learning Objectives:
 -------------------
+
 #### What's the goal for this lesson?
 
 * Use a series of command line tools to perform a variant calling workflow
@@ -81,8 +82,8 @@ We need to index the reference genome for bwa and samtools. bwa
 and samtools are programs that are pre-installed on our server.
 
 ```bash
-bwa index $genome
-samtools faidx $genome
+$ bwa index ${genome}
+$ samtools faidx ${genome}
 ```
 
 Create output paths for various intermediate and result files The -p option means mkdir will create the whole path if it does not exist (no error or message will give given if it does exist)
@@ -97,7 +98,7 @@ $ mkdir -p results/vcf
 
 We will now use a loop to run the variant calling work flow of each of our fastq files, so the list of command below will be execute once for each fastq files.
 
-We would start the loop like this, so the name of each fastq file will by assigned to $fq
+We would start the loop like this, so the name of each fastq file will by assigned to `${fq}`
 
 ```bash
 $ for fq in data/trimmed_fastq/*.fastq
@@ -108,7 +109,7 @@ $ for fq in data/trimmed_fastq/*.fastq
 In the script, it is a good idea to use echo for debugging/reporting to the screen
 
 ```bash
-$ echo "working with file $fq"
+$ echo "working with file ${fq}"
 ```
 
 This command will extract the base name of the file
@@ -116,8 +117,8 @@ This command will extract the base name of the file
 to the $base variable
 
 ```bash
-$ base=$(basename $fq .fastq)
-$ echo "base name is $base"
+$ base=$(basename ${fq} .fastq)
+$ echo "base name is ${base}"
 ```
 
 We will assign various file names to variables both
@@ -139,54 +140,56 @@ Our data are now staged.  The series of command below will run the steps of the 
 Align the reads to the reference genome
 
 ```bash
-$ bwa aln $genome $fq > $sai
+$ bwa aln ${genome} ${fq} > ${sai}
 ```
 
 Convert the output to the SAM format
 
 ```bash
-$ bwa samse $genome $sai $fq > $sam
+$ bwa samse ${genome} ${sai} ${fq} > ${sam}
 ```
 
 Convert the SAM file to BAM format
 
 ```bash
-$ samtools view -S -b $sam > $bam
+$ samtools view -S -b ${sam} > ${bam}
 ```
 Sort the BAM file
 
 ```bash
-$ samtools sort -f $bam $sorted_bam
+$ samtools sort -f ${bam} ${sorted_bam}
 ```
 Index the BAM file for display purposes
 
 ```bash
-$ samtools index $sorted_bam
+$ samtools index ${sorted_bam}
 ```
 
 Do the first pass on variant calling by counting
 read coverage
 
 ```bash
-$ samtools mpileup -g -f $genome $sorted_bam > $raw_bcf
+$ samtools mpileup -g -f ${genome} ${sorted_bam} > ${raw_bcf}
 ```
 Do the SNP calling with bcftools
 
 ```bash
-$ bcftools view -bvcg $raw_bcf > $variants
+$ bcftools view -bvcg ${raw_bcf} > ${variants}
 ```
 Filter the SNPs for the final output
 
 ```bash
-$ bcftools view $variants | /usr/share/samtools/vcfutils.pl varFilter - > $final_variants
+$ bcftools view ${variants} | /usr/share/samtools/vcfutils.pl varFilter - > ${final_variants}
 ```
     
     
 ****
 **Exercise**
-Run the script run_variant_calling.sh
+Run the script `run_variant_calling.sh`
 ****
 
+[Next: Before we start](https://acharbonneau.github.io/2016-09-28-MSU/13-before-we-start.html)
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 
 

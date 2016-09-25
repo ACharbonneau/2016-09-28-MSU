@@ -5,19 +5,22 @@ title: Getting to know your data
 minutes: 30
 ---
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+
 [Back: Quality Control](https://acharbonneau.github.io/2016-09-28-MSU/09-readQC.html)
 
-Getting to know your data
-===================
 
 Learning Objectives:
 -------------------
+
 #### What's the goal for this lesson?
+
 * You should be able to identify common features of "data" and data formats and what those features imply
 * You should be able to look at a file and be able to identify the following types of data: fasta, fastq, fastg, sra, sff, vcf, sam, bam, bed, etc...
 * You should be able to identify where your data came from (provenance)
 
 #### At the end of this lesson you should be able to:
+
 * Recognize file formats
 * Whether your data files are zipped or unzipped. You should have an understanding of file compression.
 * How to determine the file size
@@ -31,18 +34,18 @@ Learning Objectives:
 
 | File Extension |	Type of Data |	Format |	Example(s) | 
 | :------------- | :------------- | :---------------- | :----------------| :----------------| :---------------|
-| txt | multi-format | Text | study metadata, tab-delimited data | <a href="https://en.wikipedia.org/wiki/Text_file" txt</a> | |
-| fastq	| nucleotide  | Text |	sequencing reads |<a href="https://en.wikipedia.org/wiki/FASTQ_format" fastq </a> |  |
-| fasta	| nucleotide, protein | Text | the human genome | <a href="https://en.wikipedia.org/wiki/FASTA" fasta</a>| |
-| sff	| nucleotide	| Binary |	Roche/454 sequencing data |	<a href="http://www.ncbi.nlm.nih.gov/Traces/trace.cgi?cmd=show&f=formats&m=doc&s=format#sff" sff</a> |	|
-| vcf | multi-format | Text	 |	variation/SNP calls |	|  |
-| sam | alignment | Text  |	reads aligned to a reference  | <a href="https://samtools.github.io/hts-specs/SAMv1.pdf" sam </a> |	 |
-| bam | alignment	| Binary  |	reads aligned to a reference | <a href="https://samtools.github.io/hts-specs/SAMv1.pdf" bam </a> |	 |
-| bed | metadata / feature definitions  | Binary  | genome coverage | <a href="http://www.ensembl.org/info/website/upload/bed.html" bed </a> |  |
-| h5 | binary hierarchical | Binary | PacBio sequencing data | <a href="https://en.wikipedia.org/wiki/Hierarchical_Data_Format" h5 </a>| |
-| pileup | alignment | Text | mpileup, SNP and indel calling| <a href="https://en.wikipedia.org/wiki/Pileup_format" pileup</a>| |
+| txt | multi-format | Text | study metadata, tab-delimited data | <a href="https://en.wikipedia.org/wiki/Text_file"> txt</a> | 
+| fastq	| nucleotide  | Text |	sequencing reads |<a href="https://en.wikipedia.org/wiki/FASTQ_format"> fastq </a> |  
+| fasta	| nucleotide, protein | Text | the human genome | <a href="https://en.wikipedia.org/wiki/FASTA"> fasta</a>| 
+| sff	| nucleotide	| Binary |	Roche/454 sequencing data |	<a href="http://www.ncbi.nlm.nih.gov/Traces/trace.cgi?cmd=show&f=formats&m=doc&s=format#sff"> sff</a> |	
+| vcf | multi-format | Text	 |	variation/SNP calls |	<a href="http://vcftools.sourceforge.net/specs.html"> vcf </a>|  
+| sam | alignment | Text  |	reads aligned to a reference  | <a href="https://samtools.github.io/hts-specs/SAMv1.pdf"> sam </a> |	 
+| bam | alignment	| Binary  |	reads aligned to a reference | <a href="https://samtools.github.io/hts-specs/SAMv1.pdf"> bam </a> |	 
+| bed | metadata / feature definitions  | Binary  | genome coverage | <a href="http://www.ensembl.org/info/website/upload/bed.html"> bed </a> |  
+| h5 | binary hierarchical | Binary | PacBio sequencing data | <a href="https://en.wikipedia.org/wiki/Hierarchical_Data_Format"> h5 </a>| 
+| pileup | alignment | Text | mpileup, SNP and indel calling| <a href="https://en.wikipedia.org/wiki/Pileup_format"> pileup</a>| 
 
-##Looking at the data for this workshop
+## Looking at the data for this workshop
 
 In this workshop, there are a few bioinformatics-related data types we will focus on (beyond simple text files - although in principle many of the files are text). First let's consider the definition/documentation for these file types:
 
@@ -59,29 +62,31 @@ In this workshop, there are a few bioinformatics-related data types we will focu
 * bam file (binary sam file) - [definition](https://www.broadinstitute.org/igv/BAM)
 
 #### md5sum
+
 In addition to understanding how to work with these files, we also need to understand how to verify the integrity of these files. It is not uncommon to download a file, and get error messages, have to restart downloads, move files, etc. In these cases, knowing how to verify that two files are the same (not simply named the same) is very important. To do this we use a process called checksums:
 
 According to [wikipedia](https://en.wikipedia.org/wiki/Checksum) a checksum is 'a small-size datum from a block of digital data for the purpose of detecting errors which may have been introduced during its transmission or storage.'In other words it is a result we can generate that uniquely corresponds to a file. Any change to that file (adding a space, deleting a character, etc.) will change the file's checksum. 
 
-##Exercises 
+## Exercises 
 
 ### A. File integrity - download a reference genome and verify the download 
 
 1. Use ``wget`` to download two 'test' genomes from the following url:
 
-	```bash
-	$ wget http://de.iplantcollaborative.org/dl/d/6E4E9943-93F8-4136-86E3-14DA6D1B604F/GCF_000017985.1_ASM1798v1_genomic_2.fna
-	```
+```bash
+$ wget http://de.iplantcollaborative.org/dl/d/6E4E9943-93F8-4136-86E3-14DA6D1B604F/GCF_000017985.1_ASM1798v1_genomic_2.fna
+```
 and
    
-	```bash
-	$ wget http://de.iplantcollaborative.org/dl/d/6E4E9943-93F8-4136-86E3-14DA6D1B604F/GCF_000017985.1_ASM1798v1_genomic_2.fna
-	```
+```bash
+$ wget http://de.iplantcollaborative.org/dl/d/6E4E9943-93F8-4136-86E3-14DA6D1B604F/GCF_000017985.1_ASM1798v1_genomic_2.fna
+```
+
 2. Next for each of the use md5sum and compare the results
 
-	```bash 
-	$ md5sum <file>
-	```
+```bash 
+$ md5sum <file>
+```
 
 ### B. Download a reference genome from Ensembl
 
@@ -89,9 +94,10 @@ and
 2. There will be a link '[Download DNA Sequence](ftp://ftp.ensemblgenomes.org/pub/bacteria/release-27/fasta/bacteria_5_collection/escherichia_coli_b_str_rel606/dna/)(FASTA)'. Click on the link an copy the URL from the web browsers navigation/location display (i.e. http://bacteria.ensembl.org/escherichia_coli_b_str_rel606/Info/Index). 
 3. Use the ``wget`` command to download the contents of the ftp site (don't forget to use the '*' wildcard to download all files)
 
-	```bash
-	$ wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-27/fasta/bacteria_5_collection/escherichia_coli_b_str_rel606/dna/*
-	```
+```bash
+$ wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-27/fasta/bacteria_5_collection/escherichia_coli_b_str_rel606/dna/*
+```
+
 You should have downloaded the following files:
 
 	```
@@ -123,5 +129,6 @@ You should have downloaded the following files:
 
 [Next: Automation](https://acharbonneau.github.io/2016-09-28-MSU/11-automating_a_workflow.html)
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 
 

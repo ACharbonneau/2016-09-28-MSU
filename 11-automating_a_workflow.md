@@ -5,6 +5,8 @@ title: Shell Scripting
 minutes: 60
 ---
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+
 [Back: Know Your Data](https://acharbonneau.github.io/2016-09-28-MSU/10-know_your_data.html)
 
 
@@ -15,6 +17,7 @@ Shell scripts
 
 Learning Objectives:
 -------------------
+
 #### What's the goal for this lesson?
 
 * Understand what a shell script is
@@ -22,6 +25,7 @@ Learning Objectives:
 
 
 ## What is a shell script?
+
 A shell script is basically a text file that contains a list of commands
 that are executed sequentially.  The commands in a shell script are the same
 as you would use on the command line.
@@ -49,6 +53,7 @@ In this case, the interpreter is bash, which is the shell environment we are wor
 make the script executable like a 'real' program.
 
 ## How to run a shell script
+
 There are two ways to run a shell script the first way is to specify the
 interpreter (bash) and the name of the script.  By convention, shell script
 use the .sh extension, though this is not enforced.
@@ -80,8 +85,11 @@ The thing about running programs on the command line is that the shell may not k
 
 ****
 **Exercise**
+
 1) Use nano to save the code above to a script called myscript.sh
+
 2) run the script
+
 ****
 
 
@@ -91,7 +99,7 @@ Now, let's do something real.  First, recall the code from our our fastqc
 workflow from this morning, with a few extra "echo" statements.
 
 ```bash
-cd ~/dc_workshop/data/untrimmed_fastq/
+$ cd ~/dc_workshop/data/untrimmed_fastq/
 
 echo "Running fastqc..."
 ~/FastQC/fastqc *.fastq
@@ -128,6 +136,7 @@ of the script to a file while it is running.
 
 [Next: Variant Calling](https://acharbonneau.github.io/2016-09-28-MSU/12-variant-calling-workflow.html)
 
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 
 
 

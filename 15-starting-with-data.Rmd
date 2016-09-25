@@ -4,7 +4,9 @@ title: Starting with data
 author: Data Carpentry contributors
 minutes: 20
 ---
-
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
+		
+[Back: R Intro](https://acharbonneau.github.io/2016-09-28-MSU/14-intro-to-R.html)
 
 ------------
 
@@ -235,3 +237,7 @@ exprmt <- factor(exprmt, levels=c("treat1", "treat2", "treat3", "control"))
 barplot(table(exprmt))
 ```
 --->
+
+[Next: Data Frames](https://acharbonneau.github.io/2016-09-28-MSU/16-data-frames.html)
+
+[Home](https://acharbonneau.github.io/2016-09-28-MSU/)
