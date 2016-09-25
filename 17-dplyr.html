@@ -121,6 +121,8 @@ $(document).ready(function () {
 </div>
 
 
+<p><a href="https://acharbonneau.github.io/2016-09-28-MSU/">Home</a></p>
+<p><a href="https://acharbonneau.github.io/2016-09-28-MSU/16-data-frames.html">Back: Data frames</a></p>
 <hr />
 <div id="data-manipulation-using-dplyr" class="section level1">
 <h1>Data manipulation using dplyr</h1>
@@ -214,7 +216,7 @@ meta_citplus</code></pre>
 <pre class="r"><code>metadata %&gt;%
   group_by(cit) %&gt;%
   tally()</code></pre>
-<pre><code>## # A tibble: 3 x 2
+<pre><code>## # A tibble: 3 × 2
 ##       cit     n
 ##    &lt;fctr&gt; &lt;int&gt;
 ## 1   minus     9
@@ -225,7 +227,7 @@ meta_citplus</code></pre>
 <pre class="r"><code>metadata %&gt;%
   group_by(cit) %&gt;%
   summarize(mean_size = mean(genome_size, na.rm = TRUE))</code></pre>
-<pre><code>## # A tibble: 3 x 2
+<pre><code>## # A tibble: 3 × 2
 ##       cit mean_size
 ##    &lt;fctr&gt;     &lt;dbl&gt;
 ## 1   minus  4.614444
@@ -266,6 +268,8 @@ meta_citplus</code></pre>
             min_generation = min(generation))</code></pre>
 <p><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Handy dplyr cheatsheet</a></p>
 <p><em>Much of this lesson was copied or adapted from Jeff Hollister’s <a href="http://usepa.github.io/introR/2015/01/14/03-Clean/">materials</a></em></p>
+<p><a href="https://acharbonneau.github.io/2016-09-28-MSU/18-data-visualization.html">Next: Data Viz</a></p>
+<p><a href="https://acharbonneau.github.io/2016-09-28-MSU/">Home</a></p>
 </div>
 </div>
 </div>

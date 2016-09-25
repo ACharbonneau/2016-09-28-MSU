@@ -100,31 +100,34 @@ $ wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-27/fasta/bacteria_5_col
 
 You should have downloaded the following files:
 
-	```
-	CHECKSUMS
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.chromosome.Chromosome.fa.gz
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_rm.chromosome.Chromosome.fa.gz
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_rm.genome.fa.gz
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_rm.toplevel.fa.gz
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_sm.chromosome.Chromosome.fa.gz
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_sm.genome.fa.gz
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_sm.toplevel.fa.gz
-	Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.toplevel.fa.gz
-	README
-	```
+```
+CHECKSUMS
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.chromosome.Chromosome.fa.gz
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_rm.chromosome.Chromosome.fa.gz
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_rm.genome.fa.gz
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_rm.toplevel.fa.gz
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_sm.chromosome.Chromosome.fa.gz
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_sm.genome.fa.gz
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_sm.toplevel.fa.gz
+Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.toplevel.fa.gz
+README
+```
 4. Use the ``less`` command to examine the README file - in particular, look at the <sequence type> definition to understand what the differently zipped files are. 
+
 5. Generate a checksum using the ``sum`` command(``sum`` is used by Enseml and is  an alternative to ``md5sum``) for the **'Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz'** file and compare with the last few digits of the sum displayed in the CHECKSUMS file. 
+
 6. Preview the first few lines (``head``) of the compressed (gzip'd) reference genome using the ``zcat`` command:
 
-	 ```bash
-	$ zcat Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz |head
-	```
+```bash
+$ zcat Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz |head
+```
 7. Finally, unzip the E.coli reference genome, which will be part of the variant calling lesson and place it in your 'data folder' in a new 'ref_genome' folder. 
 
-	```bash
-	$ gzip -d Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz
-	```
+```bash
+$ gzip -d Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz
+```
+
 **Tip:** create the 'ref_genome' folder in '~/dc_workshop/data' and use the *cp* command to move the data
 
 [Next: Automation](https://acharbonneau.github.io/2016-09-28-MSU/11-automating_a_workflow.html)
