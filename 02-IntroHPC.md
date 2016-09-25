@@ -9,7 +9,7 @@ author: Amanda Charbonneau
 [Back: Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 
 
-#Intro to the HPC
+# Link to most recent MSU HPCC documentation
 
 <a href="https://wiki.hpcc.msu.edu/display/hpccdocs/Documentation+and+User+Manual#DocumentationandUserManual-SystemAccess"> HPCC Documentation </a>
 
