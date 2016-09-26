@@ -18,7 +18,7 @@ minutes: 20
 
 ## Lesson 
 
-The NCBI Sequence Read Archive is a large (>3 quadrillion basepairs as of 2014) repository for next-generation sequence data. Like many NCBI database it is complex and mastering its use is greater than the scope of this lesson. Very often, as in the Lenski paper, there will be a direct link (perhaps in the supplemental information) to where on the SRA the dataset can be found. The link from the Lenski paper is: http://www.ncbi.nlm.nih.gov/sra?term=SRA026813 
+The NCBI Sequence Read Archive is a large (>3 quadrillion basepairs as of 2014) repository for next-generation sequence data. Like many NCBI database it is complex and mastering its use is greater than the scope of this lesson. Very often, as in the Lenski paper, there will be a direct link (perhaps in the supplemental information) to where on the SRA the dataset can be found. The link from the Lenski paper is: [Lenski dataset](http://www.ncbi.nlm.nih.gov/sra?term=SRA026813)
 
 
 ## Exercises
@@ -27,7 +27,7 @@ The NCBI Sequence Read Archive is a large (>3 quadrillion basepairs as of 2014) 
 
 #### A. Locate the Run Accessor for the Lenski Dataset on the SRA
 
-1. Access the Lenski dataset from the provided link: http://www.ncbi.nlm.nih.gov/sra?term=SRA026813 
+1. Access the Lenski dataset from the provided link: [Lenski dataset](http://www.ncbi.nlm.nih.gov/sra?term=SRA026813) 
     > You will be presented with a page for the overall SRA accession SRA026813 - this is a collection of all the experimental data
 2. Click on the first entry ([ZDB30](http://www.ncbi.nlm.nih.gov/sra/SRX040669%5Baccn%5D)); this will take you to an a page for an SRX (Sequence Read eXperiment). Take a few minutes to examine some of the descriptions on the page
 3. Click on the [Run Selector Link](http://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP004752); this is a description of all of the NGS datasets related to the experiment. 

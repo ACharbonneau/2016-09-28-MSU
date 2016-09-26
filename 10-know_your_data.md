@@ -91,7 +91,7 @@ $ md5sum <file>
 ### B. Download a reference genome from Ensembl
 
 1. Visit the Ensembl database at [http://bacteria.ensembl.org/index.html](http://bacteria.ensembl.org/index.html). In the 'Search for a genome' search box search for 'Escherichia coli B str. REL606'; this should bring you to the genome of the strain used in the Lenski experiment ([ensemble direct link](http://bacteria.ensembl.org/escherichia_coli_b_str_rel606/Info/Index))
-2. There will be a link '[Download DNA Sequence](ftp://ftp.ensemblgenomes.org/pub/bacteria/release-27/fasta/bacteria_5_collection/escherichia_coli_b_str_rel606/dna/)(FASTA)'. Click on the link an copy the URL from the web browsers navigation/location display (i.e. http://bacteria.ensembl.org/escherichia_coli_b_str_rel606/Info/Index). 
+2. There will be a link '[Download DNA Sequence](ftp://ftp.ensemblgenomes.org/pub/bacteria/release-27/fasta/bacteria_5_collection/escherichia_coli_b_str_rel606/dna/)(FASTA)'. Click on the link and copy the URL from the web browsers navigation/location display (i.e. http://bacteria.ensembl.org/escherichia_coli_b_str_rel606/Info/Index). 
 3. Use the ``wget`` command to download the contents of the ftp site (don't forget to use the '*' wildcard to download all files)
 
 ```bash
@@ -113,22 +113,22 @@ Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna_sm.toplevel.fa.gz
 Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.toplevel.fa.gz
 README
 ```
-4. Use the ``less`` command to examine the README file - in particular, look at the <sequence type> definition to understand what the differently zipped files are. 
+4. Use the ``less`` command to examine the `README` file - in particular, look at the <sequence type> definition to understand what the differently zipped files are. 
 
-5. Generate a checksum using the ``sum`` command(``sum`` is used by Enseml and is  an alternative to ``md5sum``) for the **'Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz'** file and compare with the last few digits of the sum displayed in the CHECKSUMS file. 
+5. Generate a checksum using the ``sum`` command(``sum`` is used by Ensembl and is an alternative to ``md5sum``) for the `Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz` file and compare with the last few digits of the sum displayed in the CHECKSUMS file. 
 
 6. Preview the first few lines (``head``) of the compressed (gzip'd) reference genome using the ``zcat`` command:
 
 ```bash
 $ zcat Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz |head
 ```
-7. Finally, unzip the E.coli reference genome, which will be part of the variant calling lesson and place it in your 'data folder' in a new 'ref_genome' folder. 
+7. Finally, unzip the E.coli reference genome, which will be part of the variant calling lesson and place it in your `data` folder in a new `ref_genome` folder. 
 
 ```bash
 $ gzip -d Escherichia_coli_b_str_rel606.GCA_000017985.1.27.dna.genome.fa.gz
 ```
 
-**Tip:** create the 'ref_genome' folder in '~/dc_workshop/data' and use the *cp* command to move the data
+**Tip:** create the `ref_genome` folder in `~/dc_workshop/data` and use the `cp` command to move the data
 
 [Next: Automation](https://acharbonneau.github.io/2016-09-28-MSU/11-automating_a_workflow.html)
 

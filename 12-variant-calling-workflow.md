@@ -124,6 +124,7 @@ $ echo "base name is ${base}"
 We will assign various file names to variables both
 for convenience but also to make it easier to see what 
 is going on in the commands below.
+
 ```bash
 $ fq=data/trimmed_fastq/$base\.fastq
 $ sai=results/sai/$base\_aligned.sai
@@ -184,8 +185,11 @@ $ bcftools view ${variants} | /usr/share/samtools/vcfutils.pl varFilter - > ${fi
     
     
 ****
+
 **Exercise**
+
 Run the script `run_variant_calling.sh`
+
 ****
 
 [Next: Before we start](https://acharbonneau.github.io/2016-09-28-MSU/13-before-we-start.html)

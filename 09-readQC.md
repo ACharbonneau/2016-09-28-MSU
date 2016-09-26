@@ -9,13 +9,13 @@ minutes: 60
 
 [Back: Searching Files](https://acharbonneau.github.io/2016-09-28-MSU/08_searching_files.html)
 
-# Lesson QC of Sequence Read Data
 
 Quality Control of NGS Data
 ===================
 
 Learning Objectives:
 -------------------
+
 #### What's the goal for this lesson?
 
 * Understand how the FastQ format encodes quality
@@ -89,9 +89,11 @@ L - Illumina 1.8+ Phred+33,  raw reads typically (0, 41)
 |60	|1 in 1,000,000|	99.9999%|
 
 ## FastQC
-FastQC (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) provides a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis.
 
-The main functions of FastQC are
+[FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) provides a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis.
+
+The main functions of FastQC are:
+
 * Import of data from BAM, SAM or FastQ files (any variant)
 * Providing a quick overview to tell you in which areas there may be problems
 * Summary graphs and tables to quickly assess your data
@@ -103,24 +105,24 @@ The main functions of FastQC are
 
 ### A. Stage your data
 
-1. Create a working directory for your analysis
+Create a working directory for your analysis
    
 ```bash
 $ cd
 # this command takes us to the home directory
-
 $ mkdir dc_workshop
 ```
-2. Create three three subdirectories
+Create three three subdirectories
 
 ```bash
-mkdir dc_workshop/data
-mkdir dc_workshop/docs
-mkdir dc_workshop/results
+$ mkdir dc_workshop/data
+$ mkdir dc_workshop/docs
+$ mkdir dc_workshop/results
 ```
 
-  > The sample data we will be working with is in a hidden directory (placing a '.' in front of a directory name hides the directory. In the next step we will move some of those hidden files into our new dirctories to start our project. 
-3. Move our sample data to our working (home) directory
+The sample data we will be working with is in a hidden directory. Placing a '.' in front of a directory name hides the directory. In the next step we will move some of those hidden files into our new dirctories to start our project. 
+
+Move our sample data to our working (home) directory
    
 ```bash 
 $ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
@@ -128,14 +130,14 @@ $ mv ~/.dc_sampledata_lite/untrimmed_fastq/ ~/dc_workshop/data/
 
 ### B. Run FastQC
 
-1. Navigate to the initial fastq dataset
+Navigate to the initial fastq dataset
    
 ```bash
 $ cd ~/dc_workshop/data/untrimmed_fastq/
 ```
 
 To run the fastqc program, we call it from its location in ``~/FastQC``.  fastqc will accept multiple file names as input, so we can use the *.fastq wildcard.
-2. Run FastQC on all fastq files in the directory
+Run FastQC on all fastq files in the directory
 
 ```bash
 $ ~/FastQC/fastqc *.fastq
@@ -146,7 +148,7 @@ Now, let's create a home for our results
 $ mkdir ~/dc_workshop/results/fastqc_untrimmed_reads
 ```
 
-3. Next, move the files there (recall, we are still in ``~/dc_workshop/data/untrimmed_fastq/``)
+Next, move the files there (recall, we are still in ``~/dc_workshop/data/untrimmed_fastq/``)
 
 ```bash 
 $ mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
@@ -157,56 +159,70 @@ $ mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
 
 Lets examine the results in detail
 
-1. Navigate to the results and view the directory contents
+Navigate to the results and view the directory contents
 
 ```bash
 $ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
 $ ls
 ```
    
- > The zip files need to be unpacked with the 'unzip' program.  
-2. Use unzip to unzip the FastQC results: 
+The zip files need to be unpacked with the 'unzip' program.  
+Use unzip to unzip the FastQC results: 
 	
 ```bash
 $ unzip *.zip
 ```
 
 Did it work? No, because 'unzip' expects to get only one zip file.  Welcome to the real world. We *could* do each file, one by one, but what if we have 500 files?  There is a smarter way. We can save time by using a simple shell 'for loop' to iterate through the list of files in *.zip. After you type the first line, you will get a special '>' prompt to type next next lines. You start with 'do', then enter your commands, then end with 'done' to execute the loop.
-3. Build a ``for`` loop to unzip the files
+Build a ``for`` loop to unzip the files
 
 
 ```bash 
 $ for zip in *.zip
 > do
-> unzip $zip
+> unzip ${zip}
 > done
 ```
 
-  Note that, in the first line, we create a variable named 'zip'.  After that, we call that variable with the syntax $zip.  $zip is assigned the value of each item (file) in the list *.zip, once for each iteration of the loop.
+Note that, in the first line, we create a variable named `zip`.  After that, we call that variable with the syntax `${zip}`.  `${zip}` is assigned the value of each item (file) in the list `*.zip`, once for each iteration of the loop.
 
-This loop is basically a simple program.  When it runs, it will run unzip once for each file (whose name is stored in the $zip variable). The contents of each file will be unpacked into a separate directory by the unzip program.
+This loop is basically a simple program.  When it runs, it will run unzip once for each file (whose name is stored in the `${zip}` variable). The contents of each file will be unpacked into a separate directory by the unzip program.
+
+Let's say we wanted to do this on thousands of files, how would we know it's working? We could make the loop tell us each time it starts a new file, using `echo`:
+
+```bash
+$ for zip in *.zip
+> do 
+> echo File ${zip}
+> unzip ${zip}
+> done
+```
 
 The for loop is interpreted as a multipart command.  If you press the up arrow on your keyboard to recall the command, it will be shown like so:
 
 ```bash
-$ for zip in *.zip; do echo File $zip; unzip $zip; done
+$ for zip in *.zip; do; echo File ${zip}; unzip ${zip}; done
 ```
 
 When you check your history later, it will help your remember what you did!
 
 ### D. Document your work
 
-To save a record, let's cat all fastqc summary.txts into one full_report.txt and move this to ``~/dc_workshop/docs``. You can use wildcards in paths as well as file names.  Do you remember how we said 'cat' is really meant for concatenating text files?
+To save a record, let's `cat` all fastqc `summary.txts` into one `full_report.txt` and move this to ``~/dc_workshop/docs``. You can use wildcards in paths as well as file names.  Do you remember how we said `cat` is really meant for concatenating text files?
 
 ```bash    
 $ cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
 ```
 
+### E. Examine your FASTQC output
 
-##How to clean reads using *Trimmomatic*
-###A detailed explanation of features
 
-Once we have an idea of the quality of our raw data, it is time to trim away adapters and filter out poor quality score reads. To accomplish this task we will use *Trimmomatic* [http://www.usadellab.org/cms/?page=trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic).
+
+## How to clean reads using *Trimmomatic*
+
+### A detailed explanation of features
+
+Once we have an idea of the quality of our raw data, it is time to trim away adapters and filter out poor quality score reads. To accomplish this task we will use [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic).
 
 *Trimmomatic* is a java based program that can remove sequencer specific reads and nucleotides that fall below a certain threshold. *Trimmomatic* can be multithreaded to run quickly. 
 
@@ -216,7 +232,7 @@ Because *Trimmomatic* is java based, it is run using the command:
 
 What follows this are the specific commands that tells the program exactly how you want it to operate. *Trimmomatic* has a variety of options and parameters:
 
-* **_-threds_** How many processors do you want *Trimmomatic* to run with?
+* **_-threads_** How many processors do you want *Trimmomatic* to run with?
 * **_SE_** or **_PE_** Single End or Paired End reads?
 * **_-phred33_** or **_-phred64_** Which quality score do your reads have?
 * **_SLIDINGWINDOW_** Perform sliding window trimming, cutting once the average quality within the window falls below a threshold.
@@ -228,9 +244,6 @@ What follows this are the specific commands that tells the program exactly how y
 * **_TOPHRED33_** Convert quality scores to Phred-33.
 * **_TOPHRED64_** Convert quality scores to Phred-64.
 
-A generic command for *Trimmomatic* looks like this:
-
-**java jar trimmomatic-0.32.jar SE -thr**
 
 A complete command for *Trimmomatic* will look something like this:
 
@@ -301,5 +314,11 @@ Do you remember how the first specifies a variable that is assigned the value of
 [Home](https://acharbonneau.github.io/2016-09-28-MSU/)
 
 
+##Fix
 
+* Trimmomatic instructions need grammar
+* Need to open FASTQC at some point, both before and after trimmomatic 
+* run second fastqc by yourself
+* in trim bash instructions, fix variable names
+* in trim prose instructions, fix ' to `
 

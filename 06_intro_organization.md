@@ -174,10 +174,17 @@ Use the '#' key to make a line a heading (subtitle). For really big fonts use ju
 
 ### Bolding and emphasis
 
-Surrounding a word or phrase with one set of asterisks (**) *makes it italic*. Using two sets **makes it bold**. 
+Surrounding a word or phrase with one set of asterisks `*makes it italic*` *makes it italic*. Using two sets `**makes it bold**` **makes it bold**. 
 
 #### Lists 
-Lists can be
+Lists can be:
+
+`* Unordered`
+
+`* Start with a single asterisk`
+
+`* Have one item per line.`
+
 
 * Unordered
 
@@ -187,6 +194,10 @@ Lists can be
 
 To make an ordered list:
 
+`1. Start the list with one number, followed by a period`
+
+`2. On the next line, just use the next number.`
+
 1. Start the list with one number, followed by a period
 
 2. On the next line, just use the next number. 
@@ -194,6 +205,8 @@ To make an ordered list:
 
 #### Links and Images
 A link is properly written in markdown using a pair of square brackets '[]' followed by round parentheses '()'. The text of the link will go in the square brackets, and the actual URL will go in the parentheses: 
+
+`[Link to Markdown Basics](https://help.github.com/articles/markdown-basics/)`
 
 [Link to Markdown Basics](https://help.github.com/articles/markdown-basics/)
 
@@ -212,7 +225,7 @@ If you want an image, just follow the link text in the brackets with an exclamat
 
 ### References
 
-[A Quick Guide to Organizing Computational Biology Projects] (http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424)
+[A Quick Guide to Organizing Computational Biology Projects](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424)
 
 
 [Next: BASH](https://acharbonneau.github.io/2016-09-28-MSU/07_the_filesystem.html)

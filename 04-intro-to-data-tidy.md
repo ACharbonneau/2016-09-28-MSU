@@ -31,7 +31,7 @@ Good morning, Mr/Mrs. Scientist.  Your mission, should you choose to accept it, 
 
 **The Experiment**  
 
-You have two groups of mice (3 mice in each group as biolgoical triplicates).  These mice are grouped as being fed two different diet treatments (Propietary Diet #77: *a Fritos-only* diet and Propietary Diet #50:a *carrots-only* diet).  You have sampled DNA at intermittent time periods over the course of an eight week study.  This DNA has been experimentally separated into three unique size fractions based on previous experimental methods (XL, AVG, and TINY).
+You have two groups of mice (3 mice in each group as biological triplicates).  These mice are grouped as being fed two different diet treatments (Propietary Diet #77: *a Fritos-only* diet and Propietary Diet #50:a *carrots-only* diet).  You have sampled DNA at intermittent time periods over the course of an eight week study.  This DNA has been experimentally separated into three unique size fractions based on previous experimental methods (XL, AVG, and TINY).
 
 **The players**  
 
@@ -101,10 +101,6 @@ Here's what the data organization of the sequencing facility looks like:
 
 <a href="url"><img src="https://raw.githubusercontent.com/datacarpentry/2015-08-24-ISU/master/img/00-seq-facility-data-structure.jpg" width="400" ></a>
 
-
-## Exercise.  
-
-You want to test a hypothesis that each day, fraction, and diet will contain genes that are signicantly different under varying treatments.  How does the sequencing facility organization and the organization of files for your analysis differ?  What about the naming of the files?  Are they useful to you?  Draw a data organization structure that you would recommend.
 
 ## Concluding notes
 

@@ -11,10 +11,6 @@ author: Sheldon McKay
 
 [Back: BASH](https://acharbonneau.github.io/2016-09-28-MSU/07_the_filesystem.html)
 
-# The Shell
-
-
-
 Adapted from the lesson by Tracy Teal.
 Original contributors:
 Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)

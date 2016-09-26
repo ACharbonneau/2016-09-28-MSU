@@ -9,7 +9,6 @@ minutes: 20
 		
 [Back: Data Viz](https://acharbonneau.github.io/2016-09-28-MSU/18-data-visualization.html)
 
-# Move data onto your instance
 
 ## Moving data is simple
 
@@ -25,13 +24,13 @@ $ wget ftp://bacteria.ensemble....
 
 In this case, you are using a command line tool, *wget*, to download content from a webserver.  This command supports downloading files from FTP and HTTP(s).  The tool *wget* also supports recursive download (with the parameter *-r*), allowing you to download content from a directory or folder.  For your information, there are other command line tools that can also be used to download data (e.g., *curl*), but *wget* should serve you well for this lesson and bioinformatic analysis.
 
-##Exercises 
+## Exercises 
 
 ### Moving files between your laptop and your instance
 
 These directions are platform specific so please follow the instructions for your system
 
-##Uploading Data to your Virtual Machine
+## Uploading Data to your Virtual Machine
 
 #### PC
 
@@ -63,7 +62,7 @@ C:\User\your-pc-username\Downloads> pscp.exe local_file.txt dcuser@ip.address:/h
 $  scp local_file.txt dcuser@ip.address:/home/dcuser/
 ```
 
-##Downloading Data from your Virtual Machine
+## Downloading Data from your Virtual Machine
 
 Let's download a zipped file from our remote machine.  You should have a fastqc report in ~/dc_workshop/results/fastqc_untrimmed_reads/SRR097977_fastqc.zip
 
