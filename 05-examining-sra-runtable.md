@@ -107,10 +107,6 @@ For the purposes of this workshop, we will be working with 6 of the fastq reads 
 |SRR098026|CZB154|33,000|Cit+|
 |SRR098027|CZB199|33,000|C1|
 
-We can see just those lines by using a few other bash commands: `cut` and `head`
-
-```bash
-$ cut SraRunTable.txt -f 1-4 | head | column -t
 
 ## Where to learn more
 

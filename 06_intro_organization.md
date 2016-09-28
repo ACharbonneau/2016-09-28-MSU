@@ -39,7 +39,7 @@ In this exercise we will setup a filesystem for the project we will be using ove
 
 #### A. Create a file system for a project
 
-Inspired by the guide below, we will start by create a directory that we can use for the rest of the workshop:
+We will start by create a directory that we can use for the rest of the workshop:
 
 First, make sure that you are in your home directory:
 
@@ -49,6 +49,12 @@ $ pwd
 # Yours should say: '/mnt/home/<yourID>'
 ```
 
+Then, make a new directory to hold all of our work for this project:
+
+```bash
+$ mkdir dc_workshop
+```
+
 **Tip:** Remember, when we give a command, rather than copying and pasting, just type it out. Also the '$' indicates we are at the command prompt, do not include that in your command.
 
 **Tip** If you were not in your home directory, the easiest way to get there is to enter the command ``cd`` which always returns you to home.
@@ -56,7 +62,6 @@ $ pwd
 Next, try making the following directories using the ``mkdir`` command
 
 
-* dc_workshop
 * dc_workshop/docs
 * dc_workshop/data
 * dc_workshop/results
@@ -131,9 +136,8 @@ This recursively copies the `dc_sample_data` folder to whatever folder you are c
 Now, we can give these more permissions:
 
 ```bash
-$ chmod -R 777 dc_sample_data/
+$ chmod -R 777 *
 $ ls -l
-$ cd dc_sample_data
 ```
 
 
