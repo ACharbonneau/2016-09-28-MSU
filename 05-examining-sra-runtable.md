@@ -71,6 +71,23 @@ $ cat SraRunTable.txt
 ```bash
 $ column -t SraRunTable.txt
 ```
+Or, we can look at it with a text viewer like `less`:
+
+```bash
+$ less SraRunTable.txt
+```
+
+Or, we can even just look at just a subset of the data:
+
+```bash
+$ cut SraRunTable.txt -f 1-4 | head -6 | column -t
+```
+
+Or both!
+
+```bash
+$ cut SraRunTable.txt -f 1-4 | head -6 | column -t | less
+```
 
 4. In this case we are using the 'column' program to make the print out more pretty. 
 
@@ -89,6 +106,11 @@ For the purposes of this workshop, we will be working with 6 of the fastq reads 
 |SRR097977|CZB152|33,000|Cit+|
 |SRR098026|CZB154|33,000|Cit+|
 |SRR098027|CZB199|33,000|C1|
+
+We can see just those lines by using a few other bash commands: `cut` and `head`
+
+```bash
+$ cut SraRunTable.txt -f 1-4 | head | column -t
 
 ## Where to learn more
 
