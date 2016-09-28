@@ -27,12 +27,10 @@ The NCBI Sequence Read Archive is a large (>3 quadrillion basepairs as of 2014) 
 
 #### A. Locate the Run Accessor for the Lenski Dataset on the SRA
 
-1. Access the Lenski dataset from the provided link: [Lenski dataset](http://www.ncbi.nlm.nih.gov/sra?term=SRA026813) 
-    > You will be presented with a page for the overall SRA accession SRA026813 - this is a collection of all the experimental data
+1. Access the Lenski dataset from the provided link: [Lenski dataset](http://www.ncbi.nlm.nih.gov/sra?term=SRA026813) You will be presented with a page for the overall SRA accession SRA026813 - this is a collection of all the experimental data
 2. Click on the first entry ([ZDB30](http://www.ncbi.nlm.nih.gov/sra/SRX040669%5Baccn%5D)); this will take you to an a page for an SRX (Sequence Read eXperiment). Take a few minutes to examine some of the descriptions on the page
 3. Click on the [Run Selector Link](http://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP004752); this is a description of all of the NGS datasets related to the experiment. 
-4. Go to the top of the page and **In the 'Total row'** you will see there are 37 runs, 10.15Gb data, and 16.45 Gbases of data. Click the 'RunInfo Table' button. 
-    > We are not downloading any actual sequence data here! This is only a text file that fully describes the entire dataset
+4. Go to the top of the page and **In the 'Total row'** you will see there are 37 runs, 10.15Gb data, and 16.45 Gbases of data. Click the 'RunInfo Table' button. We are not downloading any actual sequence data here! This is only a text file that fully describes the entire dataset
 
 You should now have a file called **SraRunTable.txt**
 
@@ -53,15 +51,13 @@ After answering the question, you should avoid saving this file; we don't want t
 
 We are going to be doing our formal shell lesson next. However, we can already play with a few simple commands that have you thinking about how the shell can be useful tool in examining your dataset
 
-> At this point, please verify that you are working from the the ami-6516b30e image where we have prestaged all the data for the rest of the lessons
-
 
 During the shell lesson we will go much more step-by-step, building our way through every command before we use it. For this first command go ahead any copy and paste if you are just getting use to the shell. The other commands are short enough to type and follow. 
 
 1. Follow you instructor's direction to navigate to the sample SraRunTable.txt file that has be placed on your remote computer
 
 ```bash
-$ cd ~/dc_sample_data/sra_metadata
+$ cd /mnt/research/common-data/workshops/genomics/dc_sample_data/sra_metadata
 ```
 2. Display the contents of the SraRunTable.txt on your screen
 

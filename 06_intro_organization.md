@@ -45,8 +45,8 @@ First, make sure that you are in your home directory:
 
 ```bash
 $ pwd
-/home/dcuser
-# Hopefully you got the above output '/home/dcuser' 
+/mnt/home/charbo24
+# Yours should say: '/mnt/home/<yourID>' 
 ```
 
 **Tip:** Remember, when we give a command, rather than copying and pasting, just type it out. Also the '$' indicates we are at the command prompt, do not include that in your command. 
@@ -81,7 +81,63 @@ dc_workshop/docs:
 dc_workshop/results:
 ```
 
-#### B. Document your activity on the project
+#### B. Move your data here
+
+Currently, the data is read-only. We can check this by doing an `ls`
+
+```bash
+$ ls -l /mnt/research/common-data/workshops/genomics/dc_sample_data/
+```
+Notice that we didn't have to actually go to that directory in order to see the contents:
+
+```bash
+$ pwd
+```
+
+Your ls should have given you these results:
+
+```bash
+drwxr-sr-- 2 billspat common-data 3 Jul 30  2015 sra_metadata
+drwxr-sr-x 2 billspat common-data 4 Jul 30  2015 untrimmed_fastq
+```
+
+There are 10 characters at the beginning of each line, and they tell you about permissions, that is, what users are allowed to do with each file.
+The 'd' at the beginning tells us that each of these is a directory, then each set of three characters after that tells us abou the privileges for each class of user, in order:
+
+1. Owner (characters 2-4)
+2. Group (5-7)
+3. Users (8-10)
+
+The three characters each tell us about a different action each user might use, in order:
+
+1. Read
+2. Write
+3. Execute
+
+For these two directories, the owner, that is, the person that uploaded them, can read, write and execute (run programs that are in) in these folders.
+People in groups with special access to these directories can read, but not write, and have special execute privileges. 
+Everyone else (that's us!) can ONLY read `sra_metadata`, but we can also execute any code in `untrimmed_fastq`
+
+This is how you want to keep your important data, like raw sequencing files. Because we ONLY have read access, we can't accidentally delete or overwrite these files. 
+If we want to do anything with them other than look at them, we'll have to make a copy to use. 
+
+```bash
+$ cd dc_workshop/data
+$ cp -r  /mnt/research/common-data/workshops/genomics/dc_sample_data/* .
+```
+
+This recursively copies the `dc_sample_data` folder to whatever folder you are currently in. 
+
+Now, we can give these more permissions:
+
+```bash
+$ chmod -R 777 dc_sample_data/
+$ ls -l
+$ cd dc_sample_data
+```
+
+
+#### C. Document your activity on the project
 
 The *history* command is a convenient way to document the all the commands you have used while analyzing and manipulating your project. Let's document the work we have done to create these folders. 
 
@@ -129,6 +185,7 @@ From the nano screen, you should be able to use your cursor to navigate, type, a
 7. Close nano by hitting 'Control' and the 'X' key at the same time; notice in nano this is abbreviated '\^X'; nano will ask if you want to save; hit 'Y' for yes. When prompted for the 'File Name to Write' we can hit 'Enter' to keep the same name and save. 
 
 8. Now that you have created the file, move the file to 'dc_workshop/docs' using the ``mv`` command. 
+
 
 #### C. Intro to Markdown
 
