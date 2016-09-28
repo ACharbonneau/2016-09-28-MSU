@@ -176,17 +176,11 @@ and make sure the program has access to the data. Many of the problems
 people run in to with command line bioinformatics programs is not having the
 data in the place the program expects it to be.
 
-In addition to using `ls`, the command `tree` might help you to get a mental image of you directorty structure: 
+In addition to using `ls`, the command `tree` might help you to get a mental image of you directory structure: 
 
 ```bash
 $ tree
-.
-└── dc_sample_data
-    ├── sra_metadata
-    │   └── SraRunTable.txt
-    └── untrimmed_fastq
-        ├── SRR097977.fastq
-        └── SRR098026.fastq
+	dc_workshop/	├── data	│   ├── sra_metadata	│   │   └── SraRunTable.txt	│   └── untrimmed_fastq	│       ├── SRR097977.fastq	│       └── SRR098026.fastq	├── docs	└── results
 ```
 
 
@@ -623,8 +617,8 @@ The commands are `head` and `tail` and they just let you look at
 the beginning and end of a file respectively.
 
 ``` bash
-head SRR098026.fastq
-tail SRR098026.fastq
+$ head SRR098026.fastq
+$ tail SRR098026.fastq
 ```
 
 The `-n` option to either of these commands can be used to print the
@@ -632,8 +626,8 @@ first or last `n` lines of a file. To print the first/last line of the
 file use:
 
 ```bash
-head -n 1 SRR098026.fastq
-tail -n 1 SRR098026.fastq
+$ head -n 1 SRR098026.fastq
+$ tail -n 1 SRR098026.fastq
 ```
 
 ## Creating, moving, copying, and removing
@@ -749,7 +743,7 @@ Now you've written a file. You can take a look at it with less or cat, or open i
 
 Open `awesome.sh` and add "echo AWESOME!" after the grep command and save the file.
 
-We're going to come back and use this file in just a bit.
+We can do more exciting things with this file in just a bit...
 
 ***
 
