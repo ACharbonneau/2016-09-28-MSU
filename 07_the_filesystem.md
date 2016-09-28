@@ -70,7 +70,7 @@ Open up the program.
 
 Linux  
 -----
-The shell is available by default when you connect to your AWS instance.  You should be set.
+The shell is available by default.  You should be set.
 
 
 
@@ -85,15 +85,15 @@ internet access, because you're going to get it off the web.
 We're going to be working with data on our remote server.
 
 
-After loggin on, let's check out the example data.
+After logging on, let's check out the example data.
 
 Let's go into the sample data  directory
 
 ```bash
-$ cd dc_sample data
+$ cd dc_sample/data
 ```
 
-'cd' stands for 'change directory'
+`cd` stands for 'change directory'
 
 Let's see what is in here. Type ```ls```
 
@@ -132,7 +132,7 @@ Let's go into the untrimmed_fastq directory and see what is in there.
 
 ```bash
 $ cd untrimmed_fastq
-# ls -F
+$ ls -F
     SRR097977.fastq  SRR098026.fastq
 ```
 
@@ -176,6 +176,19 @@ and make sure the program has access to the data. Many of the problems
 people run in to with command line bioinformatics programs is not having the
 data in the place the program expects it to be.
 
+In addition to using `ls`, the command `tree` might help you to get a mental image of you directorty structure: 
+
+```bash
+$ tree
+.
+└── dc_sample_data
+    ├── sra_metadata
+    │   └── SraRunTable.txt
+    └── untrimmed_fastq
+        ├── SRR097977.fastq
+        └── SRR098026.fastq
+```
+
 
 ## Moving around the file system
 
@@ -199,7 +212,7 @@ with root (/) at the base that looks like this.
 That (/) at the base is often also called the 'top' level.
 
 When you are working at your computer or log in to a remote computer,
-you are on one of the branches of that tree, your home directory (/home/dcuser)
+you are on one of the branches of that tree, your home directory (/home/user)
 
 Now let's go do that same navigation at the command line.
 
@@ -239,12 +252,12 @@ Now do `ls` and `pwd`. See now that we went back up in to the 'dc_sample_data'
 directory. `..` means go back up a level.
 
 * * * *
-**Exercise**
+### **Exercise**
 
-Now we're going to try a hunt.  Find a hidden directory in dc_sample_data list its contents
+Now we're going to try a hunt.  Find a hidden directory in `dc_sample_data` list its contents
 and file the text file in there.  What is the name of the file?
 
-Hint: hidden files and folders in unix start with '.', for example .my_hidden_directory
+Hint: hidden files and folders in unix start with '.', for example `.my_hidden_directory`,
 * * * *
 
 
@@ -282,7 +295,7 @@ and you will jump directly to `untrimmed_fastq` without having to go through
 the intermediate directory.
 
 ****
-**Exercise**
+### **Exercise**
 
 List the `SRR097977.fastq` file from your home directory without changing directories
 ****
@@ -294,12 +307,16 @@ lot of time. When you start typing out the name of a directory, then
 hit the tab key, the shell will try to fill in the rest of the
 directory name. For example, type `cd` to get back to your home directy, then enter:
 
-    cd dc_<tab>
+```bash
+$ cd dc_<tab>
+```
 
 The shell will fill in the rest of the directory name for
 `dc_sample_data`. Now go to dc_sample_data/untrimmed_fastq
 
-    ls SR<tab><tab>
+```bash
+$ ls SR<tab><tab>
+```
 
 When you hit the first tab, nothing happens. The reason is that there
 are multiple directories in the home directory which start with
@@ -316,44 +333,42 @@ will see that tab completion works.
 ## Full vs. Relative Paths
 
 The `cd` command takes an argument which is the directory
-name. Directories can be specified using either a *relative* path or a
-full *path*. The directories on the computer are arranged into a
+name. Directories can be specified using either a *relative path* or a
+*full path*. The directories on the computer are arranged into a
 hierarchy. The full path tells you where a directory is in that
 hierarchy. Navigate to the home directory. Now, enter the `pwd`
 command and you should see:
 
-    /home/dcuser
+    /mnt/home/USER
 
 which is the full name of your home directory. This tells you that you
-are in a directory called `dcuser`, which sits inside a directory called
+are in a directory called `user`, which sits inside a directory called
 `home` which sits inside the very top directory in the hierarchy. The
 very top of the hierarchy is a directory called `/` which is usually
-referred to as the *root directory*. So, to summarize: `dcuser` is a
+referred to as the *root directory*. So, to summarize: `user` is a
 directory in `home` which is a directory in `/`.
 
 Now enter the following command:
 
-    cd /home/dcuser/dc_sample_data/.hidden
+``` bash
+$ cd /home/user/dc_sample_data/.hidden
+```
 
 This jumps to `.hidden`. Now go back to the home directory (cd). We saw
 earlier that the command:
 
-    cd dc_sample_data/.hidden
+```bash
+$cd dc_sample_data/.hidden
+```
 
-had the same effect - it took us to the `hidden` directory. But,
+...had the same effect - it took us to the `hidden` directory. But,
 instead of specifying the full path
-(`/home/dcuser/dc_sample_data/data`), we specified a *relative path*. In
+(`/home/user/dc_sample_data/data`), we specified a *relative path*. In
 other words, we specified the path relative to our current
-directory. A full path always starts with a `/`. A relative path does
-not.
+directory. A full path always starts with at the top of the tree; at `/`. A relative path need not.
 
 A relative path is like getting directions
-from someone on the street. They tell you to "go right at the Stop sign, and
-then turn left on Main Street". That works great if you're standing there
-together, but not so well if you're trying to tell someone how to get there
-from another country. A full path is like GPS coordinates.
-It tells you exactly where something
-is no matter where you are right now.
+from someone on the street. They tell you to "go right at the Stop sign, and then turn left on Main Street". That works great if you're standing there together, but not so well if you're trying to tell someone how to get there from another country. A full path is like GPS coordinates. It tells you exactly where something is no matter where you are right now.
 
 You can usually use either a full path or a relative path
 depending on what is most convenient. If we are in the home directory,
@@ -365,7 +380,8 @@ structure of the directories that you are using and how to quickly
 navigate amongst them.
 
 ***
-**Exercise**
+
+### **Exercise**
 
 Now, list the contents of the `/bin` directory. Do you see anything
 familiar in there? 
@@ -382,25 +398,33 @@ home directory is very common. So, in the shell the tilde character,
 ""~"", is a shortcut for your home directory. Navigate to the `dc_sample_data`
 directory:
 
-    cd
-    cd dc_sample_data
+``` bash
+$ cd
+$ cd dc_sample_data
+```
 
 Then enter the command:
 
-    ls ~
+``` bash
+$ ls ~
+```
 
 This prints the contents of your home directory, without you having to
 type the full path. The shortcut `..` always refers to the directory
 above your current directory. Thus:
 
-    ls ..
+``` bash
+$ ls ..
+```
 
-prints the contents of the `/home/dcuser/dc_sample_data`. You can chain
+prints the contents of the `/home/user/dc_sample_data`. You can chain
 these together, so:
 
-    ls ../../
+``` bash
+$ ls ../../
+```
 
-prints the contents of `/home/dcuser` which is your home
+prints the contents of `/home/user` which is your home
 directory. Finally, the special directory `.` always refers to your
 current directory. So, `ls`, `ls .`, and `ls ././././.` all do the
 same thing, they print the contents of the current directory. This may
@@ -408,7 +432,7 @@ seem like a useless shortcut right now, but we'll see when it is
 needed in a little while.
 
 To summarize, while you are in the `shell` directory, the commands
-`ls ~`, `ls ~/.`, `ls ../../`, and `ls /home/dcuser` all do exactly the
+`ls ~`, `ls ~/.`, `ls ../../`, and `ls /home/user` all do exactly the
 same thing. These shortcuts are not necessary, they are provided for
 your convenience.
 
@@ -427,15 +451,21 @@ The `*` character is a shortcut for "everything". Thus, if
 you enter `ls *`, you will see all of the contents of a given
 directory. Now try this command:
 
-    ls *fastq
+``` bash
+$ ls *fastq
+```
 
 This lists every file that ends with a `fastq`. This command:
 
-    ls /usr/bin/*.sh
+``` bash
+$ ls /usr/bin/*.sh
+```
 
 Lists every file in `/usr/bin` that ends in the characters `.sh`.
 
-    ls *977.fastq
+``` bash
+$ ls *977.fastq
+```
 
 lists only the file that ends with `977.fastq`
 
@@ -454,7 +484,8 @@ The '*' is expanded to include any file that ends with `.fastq`
 
 
 ****
-**Exercise**
+
+### **Exercise**
 
 Do each of the following using a single `ls` command without
 navigating to a different directory.
@@ -481,7 +512,9 @@ is very useful.
 
 You can also review your recent commands with the `history` command.  Just enter:
 
-    history
+``` bash
+$ history
+```
 
 to see a numbered list of recent commands, including this just issues
 `history` command.  You can reuse one of these commands directly by
@@ -495,12 +528,15 @@ If your history looked like this:
 
 then you could repeat command #260 by simply entering:
 
-    !260
+``` bash
+$ !260
+```
 
 (that's an exclamation mark).  You will be glad you learned this when you try to re-run very complicated commands.
 
 ****
-**Exercise**
+
+### **Exercise**
 
 1. Find the line number in your history for the last exercise (listing
 files in `/bin`) and reissue that command.
@@ -517,30 +553,36 @@ contents of directories, but how do we look at the contents of files?
 The easiest way to examine a file is to just print out all of the
 contents using the program `cat`. Enter the following command:
 
-    cat SRR098026.fastq
+``` bash
+$ cat SRR098026.fastq
+```
 
 This prints out the all the contents of the the `SRR098026.fastq` to the screen.
 
 * * * *
-**Exercises**
+
+### **Exercises**
 
 1.  Print out the contents of the `~/dc_sample_data/untrimmed_fastq/SRR097977.fastq`
     file. What does this file contain?
 
 2.  From your home directory, without changing directories,
     use one short command to print the contents of all of the files in
-    the `/home/dcuser/dc_sample_data/untrimmed_fastq` directory.
+    the `/home/user/dc_sample_data/untrimmed_fastq` directory.
 
 * * * *
 
-
-    cd ~/dc_sample_data/untrimmed_fastq
+``` bash
+$ cd ~/dc_sample_data/untrimmed_fastq
+```
 
 `cat` is a terrific program, but when the file is really big, it can
-be annoying to use. The program, `less`, is useful for this
+be annoying to use. The program `less` is useful for this
 case. Enter the following command:
 
-    less SRR098026.fastq
+``` bash
+$ less SRR098026.fastq
+```
 
 `less` opens the file, and lets you navigate through it. The commands
 are identical to the `man` program.
@@ -550,7 +592,7 @@ are identical to the `man` program.
 | key     | action |
 | ------- | ---------- |
 | "space" | to go forward |
-|  "b"    | to go backwarsd |
+|  "b"    | to go backward |
 |  "g"    | to go to the beginning |
 |  "G"    | to go to the end |
 |  "q"    | to quit |
@@ -580,8 +622,10 @@ to see the beginning or end of the file, or see how it's formatted.
 The commands are `head` and `tail` and they just let you look at
 the beginning and end of a file respectively.
 
+``` bash
 head SRR098026.fastq
 tail SRR098026.fastq
+```
 
 The `-n` option to either of these commands can be used to print the
 first or last `n` lines of a file. To print the first/last line of the
@@ -594,12 +638,7 @@ tail -n 1 SRR098026.fastq
 
 ## Creating, moving, copying, and removing
 
-Now we can move around in the file structure, look at files, search files,
-redirect. But what if we want to do normal things like copy files or move
-them around or get rid of them. Sure we could do most of these things
-without the command line, but what fun would that be?! Besides it's often
-faster to do it at the command line, or you'll be on a remote server
-like Amazon where you won't have another option.
+Now we can move around in the file structure, look at files, search files, redirect. But what if we want to do normal things like copy files or move them around or get rid of them. Sure we could do most of these things without the command line, but what fun would that be?! Besides it's often faster to do it at the command line, or you'll be on a remote server like the HPCC where you won't have another option.
 
 
 Our raw data in this case is fastq files.  We don't want to change the original files,
@@ -608,9 +647,11 @@ so let's make a copy to work with.
 Lets copy the file using the `cp` command. The `cp`
 command backs up the file. Navigate to the `data` directory and enter:
 
-    cp SRR098026.fastq SRR098026-copy.fastq
-    ls -F
-    	SRR097977.fastq  SRR098026-copy.fastq  SRR098026.fastq 
+``` bash
+$ cp SRR098026.fastq SRR098026-copy.fastq
+$ ls -F
+    	SRR097977.fastq  SRR098026-copy.fastq  SRR098026.fastq
+```
 
 Now SRR098026-copy.fastq has been created as a copy of SRR098026.fastq
 
@@ -619,37 +660,45 @@ Let's make a `backup` directory where we can put this file.
 The `mkdir` command is used to make a directory. Just enter `mkdir`
 followed by a space, then the directory name.
 
-    mkdir backup
+``` bash
+$ mkdir backup
+```
 
 We can now move our backed up file in to this directory. We can
 move files around using the command `mv`. Enter this command:
 
-    mv *-copy.fastq backup
-    ls -al backup
-    total 52
-    drwxrwxr-x 2 dcuser dcuser  4096 Jul 30 15:31 .
-    drwxr-xr-x 3 dcuser dcuser  4096 Jul 30 15:31 ..
-    -rw-r--r-- 1 dcuser dcuser 43421 Jul 30 15:28 SRR098026-copy.fastq
+``` bash
+$ mv *-copy.fastq backup
+$ ls -al backup
+total 52
+drwxrwxr-x 2 dcuser dcuser  4096 Jul 30 15:31 .
+drwxr-xr-x 3 dcuser dcuser  4096 Jul 30 15:31 ..
+-rw-r--r-- 1 dcuser dcuser 43421 Jul 30 15:28 SRR098026-copy.fastq
+```
 
 The `mv` command is also how you rename files. Since this file is so
 important, let's rename it:
 
-    cd backup
-    mv SRR098026-copy.fastq SRR098026-copy.fastq_DO_NOT_TOUCH!
-    ls 
-    SRR098026-copy.fastq_DO_NOT_TOUCH!
+``` bash
+$ cd backup
+$ mv SRR098026-copy.fastq SRR098026-copy.fastq_DO_NOT_TOUCH!
+$ ls 
+SRR098026-copy.fastq_DO_NOT_TOUCH!
+```
 
-    Finally, we decided this was silly and want to start over.
+Finally, we decided this was silly and want to start over.
 
-    rm backup/SRR*
+``` bash
+rm backup/SRR*
+```
 
 The `rm` file permanently removes the file. Be careful with this command. It doesn't
 just nicely put the files in the Trash. They're really gone.
 
 
-
 * * * *
-**Exercise**
+
+### **Exercise**
 
 Do the following:
 
@@ -663,7 +712,9 @@ By default, `rm`, will NOT delete directories. You can tell `rm` to
 delete a directory using the `-r` option. Let's delete that `new` directory
 we just made. Enter the following command:
 
-    rm -r backup
+``` bash
+$ rm -r backup
+```
 
 ## Writing files
 
@@ -693,7 +744,8 @@ Then it asks if you want that file name. Hit 'Enter'.
 Now you've written a file. You can take a look at it with less or cat, or open it up again and edit it.
 
 ***
-**Exercise**
+
+### **Exercise**
 
 Open `awesome.sh` and add "echo AWESOME!" after the grep command and save the file.
 
