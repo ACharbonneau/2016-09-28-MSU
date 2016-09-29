@@ -156,16 +156,18 @@ Instead, we look at them in a web browser. You can do this in one of three ways:
 If you logged into the HPCC using the -X flag, you can have it show you graphics. Let's try it:
 
 ```bash
-$ firefox 
+$ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
+$ firefox SRR097977_fastqc.html
 
 ```
 
 #### ssh
 
 Or we can download them to our local computer and open them there (this is often faster)
+You have to do this in the command line *on your local computer*
 
 ```bash
-ssh 
+ssh charbo24@hpc.rsync.msu.edu:~/dc_workshop/results/fastqc_untrimmed_reads/* ~/Downloads
 ```
 
 #### text
@@ -221,16 +223,10 @@ $ for zip in *.zip; do; echo File ${zip}; unzip ${zip}; done
 
 Inside this file are mostly text files of summary data. Let's look at a couple of potentially useful ones:
 
-```bash
-unzip 64_20081121_2_RH2_fastqc.zip
-cd 1_20081121_2_RH2_fastqc/
-ls
-less fastqc_data.txt
-```
-
 This file has all of the numeric data that goes into creating the images of the `.html` file. These are useful for making your own plots, or if you want to `grep` out, say, the quality of base 30 in all of your sequencing runs. Press `q` to exit less.
 
 ```bash
+cd SRR097977_fastqc
 ls Images/
 files Images/*
 ```
@@ -291,7 +287,7 @@ What follows this are the specific commands that tells the program exactly how y
 1. Go to the untrimmed fastq data location:
 
 ```bash
-$ cd /home/dcuser/dc_workshop/data/untrimmed_fastq
+$ cd ~/dc_workshop/data/untrimmed_fastq
 ```
 
 The general form of the command is:
@@ -314,21 +310,20 @@ The next two arguments are input file and output file names.  These are then fol
 So, for the single fastq input file `SRR098283.fastq`, the command would be:
 
 ```bash
-$ java -jar /home/dcuser/Trimmomatic-0.32/trimmomatic-0.32.jar SE SRR098283.fastq \
-SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
+$ java -jar $TRIM/trimmomatic SE SRR097977.fastq SRR097977.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
 
-TrimmomaticSE: Started with arguments: SRR098283.fastq SRR098283.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
-Automatically using 2 threads
+TrimmomaticSE: Started with arguments: SRR097977.fastq SRR097977.fastq_trim.fastq SLIDINGWINDOW:4:20 MINLEN:20
+Automatically using 16 threads
 Quality encoding detected as phred33
-Input Reads: 21564058 Surviving: 17030985 (78.98%) Dropped: 4533073 (21.02%)
+Input Reads: 1000 Surviving: 916 (91.60%) Dropped: 84 (8.40%)
 TrimmomaticSE: Completed successfully
 ```
 
 So that worked and we have a new fastq file.
 
 ```bash
-$ ls SRR098283*
-SRR098283.fastq  SRR098283.fastq_trim.fastq
+$ ls SRR097977*
+SRR097977.fastq  SRR097977.fastq_trim.fastq
 ```
 
 Now we know how to run trimmomatic but there is some good news and bad news.  
@@ -340,7 +335,7 @@ We already know how to use a for loop to deal with this situation.
 $ for infile in *.fastq
 >do
 >outfile=${infile}_trim.fastq
->java -jar ~/Trimmomatic-0.32/trimmomatic-0.32.jar SE ${infile} ${outfile} SLIDINGWINDOW:4:20 MINLEN:20
+>java -jar $TRIM/trimmomatic SE ${infile} ${outfile} SLIDINGWINDOW:4:20 MINLEN:20
 >done
 ```
 
