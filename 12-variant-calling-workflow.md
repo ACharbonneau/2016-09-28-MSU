@@ -126,14 +126,14 @@ for convenience but also to make it easier to see what
 is going on in the commands below.
 
 ```bash
-$ fq=data/trimmed_fastq/$base\.fastq
-$ sai=results/sai/$base\_aligned.sai
-$ sam=results/sam/$base\_aligned.sam
-$ bam=results/bam/$base\_aligned.bam
-$ sorted_bam=results/bam/$base\_aligned_sorted.bam
-$ raw_bcf=results/bcf/$base\_raw.bcf
-$ variants=results/bcf/$base\_variants.bcf
-$ final_variants=results/vcf/$base\_final_variants.vcf    
+$ fq=data/trimmed_fastq/${base}.fastq
+$ sai=results/sai/${base}_aligned.sai
+$ sam=results/sam/${base}_aligned.sam
+$ bam=results/bam/${base}_aligned.bam
+$ sorted_bam=results/bam/${base}_aligned_sorted.bam
+$ raw_bcf=results/bcf/${base}_raw.bcf
+$ variants=results/bcf/${base}_variants.bcf
+$ final_variants=results/vcf/${base}_final_variants.vcf    
 ```
 
 Our data are now staged.  The series of command below will run the steps of the analytical workflow
